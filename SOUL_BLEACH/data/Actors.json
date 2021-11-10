@@ -1,0 +1,7 @@
+[
+null,
+{"id":1,"battlerName":"dsdsds","characterIndex":0,"characterName":"dsdsd","classId":9,"equips":[35,0,70,24,91],"faceIndex":0,"faceName":"gGg","traits":[{"code":51,"dataId":2,"value":1},{"code":51,"dataId":10,"value":1},{"code":52,"dataId":1,"value":1},{"code":52,"dataId":2,"value":1},{"code":52,"dataId":3,"value":1},{"code":52,"dataId":4,"value":1}],"initialLevel":99,"maxLevel":99,"name":"Цукиёми","nickname":"Посланник Богов","note":"","profile":"Цукиёми относиться к касте Инари. Демоны, что\nслужат во имя Богов."},
+{"id":2,"battlerName":"","characterIndex":2,"characterName":"People4","classId":7,"equips":[39,0,48,4,0],"faceIndex":2,"faceName":"People4","traits":[],"initialLevel":5,"maxLevel":99,"name":"Энди Джонс","nickname":"Великий искатель приключений","note":"","profile":"Поистене великий охотник за сокровищами не только с \nзорким глазом, но и доброй душой."},
+{"id":3,"battlerName":"СЛСЧЛЧС","characterIndex":3,"characterName":"Поыфлы","classId":5,"equips":[14,0,48,9,73],"faceIndex":2,"faceName":"кРИК","traits":[{"code":11,"dataId":1,"value":1},{"code":61,"dataId":0,"value":0.3}],"initialLevel":7,"maxLevel":99,"name":"Акира","nickname":"","note":"","profile":""},
+{"id":4,"battlerName":"","characterIndex":4,"characterName":"People2","classId":10,"equips":[0,0,0,0,0],"faceIndex":4,"faceName":"People2","traits":[{"code":13,"dataId":2,"value":1},{"code":21,"dataId":7,"value":1}],"initialLevel":10,"maxLevel":99,"name":"Эдриан","nickname":"","note":"","profile":"Виликий жулик"}
+]
