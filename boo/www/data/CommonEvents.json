@@ -1,7 +1,0 @@
-[
-null,
-{"id":1,"list":[{"code":111,"indent":0,"parameters":[11,"cancel"]},{"code":102,"indent":1,"parameters":[[" Остаться"," Сдаться"],-1,0,1,0]},{"code":402,"indent":1,"parameters":[0," Остаться"]},{"code":0,"indent":2,"parameters":[]},{"code":402,"indent":1,"parameters":[1," Сдаться"]},{"code":354,"indent":2,"parameters":[]},{"code":0,"indent":2,"parameters":[]},{"code":404,"indent":1,"parameters":[]},{"code":0,"indent":1,"parameters":[]},{"code":412,"indent":0,"parameters":[]},{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":2},
-{"id":2,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
-{"id":3,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
-{"id":4,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0}
-]
