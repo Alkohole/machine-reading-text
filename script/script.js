@@ -19,7 +19,7 @@ document.querySelector('#signup-submit').onclick = function (event) {
         "sex": sex,
     }
 
-    ajax('core/signup.php', 'POST', login, data);
+    ajax('script/google-form.js', 'POST', login, data);
 
     function login(result) {
         console.log(result);
