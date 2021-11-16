@@ -1,23 +1,27 @@
-// XMLHttpRequest
-function ajax(url, method, functionName, dataArray) {
-    let xhttp = new XMLHttpRequest();
-    xhttp.open(method, url, true);
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send(requestData(dataArray));
-
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            functionName(this.response);
-        }
-    }
-}
-
-function requestData(dataArr) {
-    let out = '';
-    for (let key in dataArr) {
-        out += `${key}=${dataArr[key]}&`;
-    }
-    console.log(out);
-    return out;
-}
+$('#submitBtn').click(function(e){
+  e.preventDefault();
+    var formData = $(this).parent('form').serialize();
+     $.ajax({
+       url: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSfD7qfNagDlYAtcfDzE4gVdiwsbj3E0NYcDlGlzi1lVA-wofw/formResponse',
+       method: 'POST',
+       data: formData,
+       statusCode: {
+           200: function(response) {
+               alert('200');
+           },
+           201: function(response) {
+               alert('201');
+           },
+           400: function(response) {
+               alert('400');
+           },
+           404: function(response) {
+               alert('401');
+           }
+       },
+       success: function() {
+           alert('Успешно');
+       },
+   });
+});
 
