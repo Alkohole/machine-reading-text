@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Signin</h1>
+    <form action="core/signup.php" method="POST">
+        <div>name: <input type="text" name="name"></div>
+        <div>password: <input type="text" name="pass"></div>
+        <div>email: <input type="text" name="email"></div>
+        <div>birthday: <input type="text" name="birthday"></div>
+        <div>sex:
+            <div> <input type="radio" value="male" name="sex">male</div>
+            <div><input type="radio" value="female" name="sex">female</div>
+            <div><input type="radio" value="other" name="sex">other</div>
+        </div>
+        <input type="submit" value="send">
+    </form>
+    <hr>
+    <h2>Login</h2>
+    <form action="core/login.php" method="POST">
+        <div>email: <input type="text" name="email"></div>
+        <div>password: <input type="text" name="pass"></div>
+
+        <input type="submit" value="send">
+    </form>
+    <hr>
+    <script>
+        document.cookie = "userName=Vasya";
+    </script>
+</body>
+
+</html>
