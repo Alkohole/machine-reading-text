@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="https://Alkohole.github.io/images/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>EmojiArt</title>
 
 <style type="text/css">
 body {
@@ -48,6 +47,25 @@ body {
   margin-left: 370px;
   z-index: 0;
 }
+.steam {
+display: block;
+position: relative;
+}
+#too-l {
+    display: block;
+    position: relative;
+    width: 50%;
+    float: left;
+}
+#too-r {
+    display: block;
+    position: relative;
+    width: 50%;
+    float: right;
+}
+button {
+    cursor: pointer;
+}
 </style>
 
 
@@ -56,8 +74,11 @@ body {
 <body>
 
 <div id="controls">
-    <div>
-        <h1 align="center" style="margin-top: 5px;"><img id="banner" height="100px" src="https://Alkohole.github.io/images/favicon.png" /></h1>
+    <div id="too-l" class="steam">
+        <button style="background-color: rgba(0, 0, 0, .0); border: 0;" onclick="window.location.href = 'https://github.com/sweaver2112';"><img class="a" style="width:64px; height: 64px; border-radius: 50%; position: relative; float: none; border-style: dotted; border-color: #1c87c9;" src="https://avatars.githubusercontent.com/u/27086894?v=4"><strong>Power by @Sweaver2112</strong></img></button>
+    </div>
+    <div id="too-r" class="steam">
+        <button style="background-color: rgba(0, 0, 0, .0); border: 0;" onclick="window.location.href = 'https://github.com/Alkohole';"><img class="a" style="width:64px; height: 64px; border-radius: 50%; position: relative; float: none; border-style: dotted; border-color: #1c87c9;" src="https://avatars.githubusercontent.com/u/59339504?v=4"><strong>Power by @Alkohole</strong></img></button>
     </div>
     <input type="file" name="image" id="image" style="margin-top: 10px; position: relative;"><div id="spinner"></div>
     
