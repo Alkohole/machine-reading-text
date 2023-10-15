@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ru" id="app" class="app application state-unresolved state-db_inactive  state-translatorExpanded  ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0"/>
+<script nonce=V8ltFVqXX5>
+window.config = {};
+window.locales = {};
+window.desktopLocales = {};
+</script>
+<style>
+    textarea{
+        margin: 0px;
+        min-width: calc(100% - 33px);
+        max-width: calc(100% - 33px);
+        min-height: 200px;
+        max-height: 200px;
+        font-size: 9px;
+        padding: 15px;
+        background-color: rgba(243, 235, 225, 0.2);
+        border-radius: 30px;
+        border: solid 2px;
+        border-color: rgba(255, 140, 0, 0.2);
+        color: rgba(0, 0, 0, 0.5);
+        transition: all 0.5s ease; /* Добавляем плавный переход */
+    }
+    textarea:focus {
+        outline: none;
+        background-color: rgba(243, 235, 225, 0.6);
+        border-color: rgba(255, 140, 0, 0.6);
+        color: rgba(0, 0, 0, 1);
+    }
+    body{
+        background-color: rgba(0, 0, 0, 0);
+    }
+    #textSpeaker{
+        padding-left: 8px;
+        padding-right: 7px;
+        padding-bottom: 10px;
+        background-color: rgba(243, 235, 225, 0.2);
+        border: solid 2px;
+        border-color: rgba(255, 140, 0, 0.2);
+        margin-top: 10px;
+        width: 100%;
+        height: 40px;
+        font-size: 22px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        color: rgba(184, 104, 0, 0.6);
+        cursor: pointer; /* Добавляем курсор-указатель */
+        transition: all 0.5s ease; /* Добавляем плавный переход */
+    }
+    #textSpeaker:hover{
+        background-color: rgba(248, 233, 214, 0.8);
+        border-color: rgba(255, 140, 0, 0.6);
+        color: rgba(255, 140, 0, .8);
+    }
+</style>
+<script nonce="V8ltFVqXX5">
+!function(n,i){if(n.Ya=n.Ya||{},Ya.Rum)throw new Error("Rum: interface is already defined");var e=n.performance,t=e&&e.timing&&e.timing.navigationStart||Ya.startPageLoad||+new Date,a=n.requestAnimationFrame,s=Ya.Rum={enabled:!!e,vsStart:document.visibilityState,vsChanged:!1,_defTimes:[],_defRes:[],_deltaMarks:{},_markListeners:{},_settings:{},_vars:{},init:function(n,i){s._settings=n,s._vars=i},getTime:e&&e.now?function(){return e.now()}:Date.now?function(){return Date.now()-t}:function(){return new Date-t},time:function(n){s._deltaMarks[n]=[s.getTime()]},timeEnd:function(n,i){var e=s._deltaMarks[n];e&&0!==e.length&&e.push(s.getTime(),i)},sendTimeMark:function(n,i,e,t){void 0===i&&(i=s.getTime()),s._defTimes.push([n,i,t]),s.mark(n,i)},sendDelta:function(n,i,e){var t=s._deltaMarks;if(!t[n]&&void 0!==i){var a=s.getTime();t[n]=[a-i,a,e]}},sendResTiming:function(n,i){s._defRes.push([n,i])},sendRaf:function(n){var i=s.getSetting("forcePaintTimeSending");if(a&&(i||!s.isVisibilityChanged())){var e="2616."+n;a(function(){!i&&s.isVisibilityChanged()||(s.getSetting("sendFirstRaf")&&s.sendTimeMark(e+".205"),a(function(){!i&&s.isVisibilityChanged()||s.sendTimeMark(e+".1928")}))})}},isVisibilityChanged:function(){return s.vsStart&&("visible"!==s.vsStart||s.vsChanged)},mark:e&&e.mark?function(n,i){e.mark(n+(i?": "+i:""))}:function(){},getSetting:function(n){var i=s._settings[n];return null===i?null:i||""},on:function(n,i){"function"==typeof i&&(s._markListeners[n]=s._markListeners[n]||[]).push(i)},sendTrafficData:function(){},finalizeLayoutShiftScore:function(){},finalizeLargestContentfulPaint:function(){},getLCPAdditionalParams:function(){}};document.addEventListener&&document.addEventListener("visibilitychange",function n(){Ya.Rum.vsChanged=!0,document.removeEventListener("visibilitychange",n)})}(window);
+</script>
+
+
+</head>
+<body data-text=""
+          data-lang=""
+          data-source-lang="ru"
+          data-target-lang="en">
+
+<main class="page-content">
+            <div id="textbox" class="box box_src state-empty">
+                <div id="fakeArea" class="fakearea textinput textlayer textlayer_src"></div>
+                <textarea id="textarea" aria-labelledby="srcLabel"></textarea>
+            </div>
+        
+            <div class="box-panel box-panel_bottom" data-box-panel="">
+                <button id="textSpeaker" class="boxButton boxButton_tts button button_view_clear button_size_l button_icn button_round">⏎</button>
+            </div>
+            <script>
+                // Функция для преобразования AudioBuffer в WAV Blob
+                function bufferToWav(buffer, sampleRate) {
+                    const MAX_BLOB_SIZE = 6 * 1024 * 1024; // 6MB in bytes
+                    const blobs = [];
+
+                    const numChannels = buffer.numberOfChannels;
+                    const numSamples = buffer.length;
+                    const numFrames = numSamples * numChannels;
+                    const dataSize = numFrames * 2;
+                    const bufferLen = 44 + dataSize;
+                    const view = new DataView(new ArrayBuffer(bufferLen));
+                    const channels = [];
+                    let offset = 0;
+
+                    for (let i = 0; i < numChannels; i++) {
+                        channels.push(buffer.getChannelData(i));
+                    }
+
+                    function writeUTFBytes(view, offset, string) {
+                        const length = string.length;
+                        for (let i = 0; i < length; i++) {
+                            view.setUint8(offset + i, string.charCodeAt(i));
+                        }
+                    }
+
+                    writeUTFBytes(view, 0, 'RIFF');
+                    view.setUint32(4, 36 + dataSize, true);
+                    writeUTFBytes(view, 8, 'WAVE');
+                    writeUTFBytes(view, 12, 'fmt ');
+                    view.setUint32(16, 16, true);
+                    view.setUint16(20, 1, true);
+                    view.setUint16(22, numChannels, true);
+                    view.setUint32(24, sampleRate, true);
+                    view.setUint32(28, sampleRate * 4, true);
+                    view.setUint16(32, numChannels * 2, true);
+                    view.setUint16(34, 16, true);
+                    writeUTFBytes(view, 36, 'data');
+                    view.setUint32(40, dataSize, true);
+
+                    offset = 44;
+                    for (let i = 0; i < numSamples; i++) {
+                        for (let channel = 0; channel < numChannels; channel++) {
+                            const sample = Math.max(-1, Math.min(1, channels[channel][i]));
+                            view.setInt16(offset, sample < 0 ? sample * 0x8000 : sample * 0x7FFF, true);
+                            offset += 2;
+                        }
+                    }
+
+                    // Check if the blob size exceeds the max size
+                    if (view.byteLength > MAX_BLOB_SIZE) {
+                        const numSplits = Math.ceil(view.byteLength / MAX_BLOB_SIZE);
+                        
+                        for (let i = 0; i < numSplits; i++) {
+                            const startByte = i * MAX_BLOB_SIZE;
+                            const endByte = Math.min((i + 1) * MAX_BLOB_SIZE, view.byteLength);
+
+                            const blob = new Blob([view.buffer.slice(startByte, endByte)], { type: 'audio/wav' });
+                            blobs.push({ fileName: `audio_record_tts_part_${i + 1}.wav`, blob: blob });
+                        }
+                    } else {
+                        const blob = new Blob([view], { type: 'audio/wav' });
+                        blobs.push({ fileName: 'audio_tts.wav', blob: blob });
+                    }
+
+                    return blobs;
+                }
+
+                let audioBlob;  // Глобальная переменная для хранения аудио Blob
+
+                const OriginalAudioContext = window.AudioContext || window.webkitAudioContext;
+                const originalAudioBufferSourceNode = OriginalAudioContext.prototype.createBufferSource;
+
+                OriginalAudioContext.prototype.createBufferSource = function() {
+                    const bufferSource = originalAudioBufferSourceNode.apply(this, arguments);
+
+                    Object.defineProperty(bufferSource, 'buffer', {
+                        set: function(audioBuffer) {
+                            if (audioBuffer) {
+                                audioBlob = bufferToWav(audioBuffer, audioBuffer.sampleRate);
+                            }
+                        }
+                    });
+
+                    return bufferSource;
+                };
+
+                // Код для кнопки скачивания
+                document.getElementById("textSpeaker").addEventListener("click", function() {
+                    setTimeout(() => {
+                        if (audioBlob && audioBlob.length > 0) {
+                            audioBlob.forEach((audioBlobInfo, index) => {
+                                const url = window.URL.createObjectURL(audioBlobInfo.blob);
+                                const a = document.createElement("a");
+                                a.style.display = "none";
+                                a.href = url;
+                                a.download = audioBlobInfo.fileName;
+                                document.body.appendChild(a);
+                                a.click();
+                                window.URL.revokeObjectURL(url);
+                            });
+
+                            // Очистка audioBlob после скачивания
+                            audioBlob = [];
+
+                            // Перезагрузка скрипта
+                            const scriptElements = document.querySelectorAll('script[nonce="V8ltFVqXX5"]');
+                            scriptElements.forEach((scriptElement) => {
+                                const newScript = document.createElement('script');
+                                newScript.nonce = "V8ltFVqXX5";
+                                newScript.innerHTML = scriptElement.innerHTML;
+                                scriptElement.parentNode.replaceChild(newScript, scriptElement);
+                            });
+                        }
+                    }, 2500);
+                });
+            </script>
+        
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const textarea = document.getElementById("textarea");
+                    const button = document.getElementById("textSpeaker");
+        
+                    // Обработчик для dragover
+                    textarea.addEventListener("dragover", function(event) {
+                        event.preventDefault();
+                        this.value = '';  // Очищаем содержимое
+                    });
+        
+                    // Обработчик для drop
+                    textarea.addEventListener("drop", function(event) {
+                        event.preventDefault();  // Предотвращаем стандартное поведение
+                        const droppedText = event.dataTransfer.getData("text/plain");
+                        this.value = droppedText; // Заменяем содержимое
+                        
+                        // Имитируем событие input
+                        const inputEvent = new Event('input', {
+                            'bubbles': true,
+                            'cancelable': true
+                        });
+                        this.dispatchEvent(inputEvent);
+                    });
+        
+                    // Обработчик для проверки количества символов
+                    textarea.addEventListener('input', function() {
+                        let textLength = textarea.value.length;
+                        
+                        if (textLength > 1000) {
+                            button.style.backgroundColor = "rgba(250, 69, 69, 0.8)";
+                            button.style.color = "rgba(243, 235, 225, 0.8)";
+                            button.innerHTML = `${textLength}/1000`;
+                        } else {
+                            button.style.backgroundColor = ""; // Возвращает к первоначальному стилю
+                            button.style.color = ""; // Возвращает цвет текста к первоначальному
+                            button.innerHTML = "⏎";
+                        }
+                    });
+                });
+            </script>
+        </main>
+        
+
+<script nonce="V8ltFVqXX5">
+    Object.assign(window.config, {
+        SID: '9c191a3f.21b77936.7f2c5246.47875647d22747',
+        VER: 'v77.2',
+        IS_SEARCH_BOT: false,
+        UID: null,
+        CLCK_URL: 'https://yandex.com/clck/click/',
+        DOMAIN: 'com',
+        DEBUG_SUPPORTED: false,
+        ENABLE_LANG_SWITCHERS: true,
+        TOAST_DELAY: 4000,
+        MAX_COL_LENGTH: 15,
+        TABLEAU_URL: 'https://yastatic.net/tableau/tableau.html',
+        TABLEAU_DELAY: 600,
+        TABLEAU_PRESET: 'com',
+        LOAD_TS: '1670871826',
+        TRANSLATOR_LANGS: {"af":"Afrikaans","sq":"Albanian","am":"Amharic","ar":"Arabic","hy":"Armenian","az":"Azerbaijani","ba":"Bashkir","eu":"Basque","be":"Belarusian","bn":"Bengali","bs":"Bosnian","bg":"Bulgarian","my":"Burmese","ca":"Catalan","ceb":"Cebuano","zh":"Chinese","cv":"Chuvash","hr":"Croatian","cs":"Czech","da":"Danish","nl":"Dutch","sjn":"Elvish (Sindarin)","emj":"Emoji","en":"English","eo":"Esperanto","et":"Estonian","fi":"Finnish","fr":"French","gl":"Galician","ka":"Georgian","de":"German","el":"Greek","gu":"Gujarati","ht":"Haitian","he":"Hebrew","mrj":"Hill Mari","hi":"Hindi","hu":"Hungarian","is":"Icelandic","id":"Indonesian","ga":"Irish","it":"Italian","ja":"Japanese","jv":"Javanese","kn":"Kannada","kk":"Kazakh","kazlat":"Kazakh (Latin)","km":"Khmer","ko":"Korean","ky":"Kyrgyz","lo":"Lao","la":"Latin","lv":"Latvian","lt":"Lithuanian","lb":"Luxembourgish","mk":"Macedonian","mg":"Malagasy","ms":"Malay","ml":"Malayalam","mt":"Maltese","mi":"Maori","mr":"Marathi","mhr":"Mari","mn":"Mongolian","ne":"Nepali","no":"Norwegian","pap":"Papiamento","fa":"Persian","pl":"Polish","pt":"Portuguese","pt-BR":"Portuguese (Brazilian)","pa":"Punjabi","ro":"Romanian","ru":"Russian","gd":"Scottish Gaelic","sr":"Serbian","si":"Sinhalese","sk":"Slovak","sl":"Slovenian","es":"Spanish","su":"Sundanese","sw":"Swahili","sv":"Swedish","tl":"Tagalog","tg":"Tajik","ta":"Tamil","tt":"Tatar","te":"Telugu","th":"Thai","tr":"Turkish","udm":"Udmurt","uk":"Ukrainian","ur":"Urdu","uz":"Uzbek","uzbcyr":"Uzbek (Cyrillic)","vi":"Vietnamese","cy":"Welsh","xh":"Xhosa","sah":"Yakut","yi":"Yiddish","zu":"Zulu"},
+        SESSIONS_PATH: '/props/api/v1.0/sessions',
+        SESSION_MAX_AGE: 10800,
+        ENABLE_SID_REQUESTING: false,
+        ENABLE_FORCE_CAPTCHA: false,
+        IS_TEST_RUN: false,
+    });
+</script>
+<script nonce="V8ltFVqXX5">
+    (function () {
+        var LANDING_TYPES = { 
+            dict: 'dict',
+            text: 'text'
+        };
+        /** @lends DesktopConfig# */Object.assign(window.config, {
+            SRV: 'tr-text',
+            FAMILY: true,
+            CSRF_TOKEN: '683fd3e9f32e3ddfabde84340c50f502413b1e1b:63977b12',
+            IS_FIRST_VISIT: false,
+            TTS_URL: 'https://tts.voicetech.yandex.net/tts',
+            UNIPROXY_URL: 'wss://uniproxy.alice.yandex.net/uni.ws',
+            TTS_RATE: 1,
+            TTS_LANGS: {
+                ru: 'ru_RU',
+            },
+            MORE_MESSAGE: '{0} more',
+            PAGEVIEW: '',
+            DETECTOR_URL: 'https://translate.yandex.net/api/v1/tr.json/detect',
+            COLLECTIONS_URL: '/props/api/',
+            SPEECHKIT_KEY: 'bf4277fc-06c0-405a-b278-b796bbbd3f27',
+            ALTERNATIVES_LANGS: {
+                'en-ru': true,
+                'ru-en': true
+            },
+            DICTIONARY_LANGS: {"lt-ru":true,"en-fr":true,"ru-tt":true,"bg-ru":true,"en-cs":true,"tr-de":true,"cs-en":true,"fr-en":true,"hu-ru":true,"en-no":true,"tr-ru":true,"lt-en":true,"it-ru":true,"fr-fr":true,"et-en":true,"ru-el":true,"pt-ru":true,"cs-ru":true,"ru-it":true,"ru-be":true,"fi-ru":true,"ru-en":true,"en-tr":true,"el-ru":true,"en-pt":true,"ru-cs":true,"nl-en":true,"ru-tr":true,"no-ru":true,"ru-mhr":true,"mhr-ru":true,"lv-ru":true,"sk-ru":true,"it-en":true,"lt-lt":true,"ru-ru":true,"es-es":true,"uk-uk":true,"en-lv":true,"uk-en":true,"ru-et":true,"de-en":true,"ru-bg":true,"sv-en":true,"zh-ru":true,"sv-ru":true,"it-it":true,"tt-ru":true,"en-de":true,"no-en":true,"mrj-ru":true,"en-sv":true,"en-da":true,"be-be":true,"lv-en":true,"da-ru":true,"ru-nl":true,"en-sk":true,"en-el":true,"ru-zh":true,"ru-hu":true,"uk-ru":true,"en-fi":true,"cs-cs":true,"ru-no":true,"de-de":true,"ru-da":true,"ru-uk":true,"nl-ru":true,"en-en":true,"ru-mrj":true,"fr-ru":true,"ru-pl":true,"el-en":true,"es-ru":true,"ru-sk":true,"ru-fr":true,"en-et":true,"hu-hu":true,"ru-lt":true,"ru-fi":true,"da-en":true,"en-nl":true,"be-ru":true,"de-ru":true,"tr-en":true,"ru-es":true,"es-en":true,"en-it":true,"fi-en":true,"pl-ru":true,"en-ru":true,"en-pt-BR":true,"ru-de":true,"de-tr":true,"ru-pt-BR":true,"sk-en":true,"ru-sv":true,"pt-en":true,"en-uk":true,"et-ru":true,"en-lt":true,"en-es":true,"ru-pt":true,"ru-lv":true,"fi-fi":true},
+            EXAMPLE_LANGS: {"en-fr":true,"ru-tr":true,"tr-ru":true,"en-de":true,"es-ru":true,"de-ru":true,"id-ru":true,"id-en":true,"fr-en":true,"ru-it":true,"es-en":true,"en-it":true,"ru-id":true,"it-ru":true,"de-en":true,"ru-de":true,"de-tr":true,"ru-es":true,"it-en":true,"fr-ru":true,"en-id":true,"en-ru":true,"tr-en":true,"ru-en":true,"en-es":true,"ru-fr":true,"tr-de":true,"en-tr":true},
+            DERIV_LANGS: {"en":true,"ru":true,"cs":true},
+            ANT_LANGS: {"en":true,"ru":true,"cs":true},
+            DECLENSIONS_LANGS: {"it":true,"es":true,"pt":true,"en":true,"de":true,"fr":true},
+            EXTERNAL_SERVICES: {
+                Google: {
+                    href: 'https://translate.google.com/',
+                    textParam: 'text',
+                    srcLangParam: 'ru',
+                    dstLangParam: 'en',
+                    langMismatches: {
+                        zh: 'zh-CN',
+                        jv: 'jw',
+                        he: 'iw',
+                        'pt-BR': 'pt',
+                    }
+                },
+            },
+            USE_FAKEAREA: true,
+            MAX_FAV_ITEMS2: 2500,
+            MAX_UNIPROXY_TTS_LENGTH: 1000,
+            MAX_TTS_LENGTH: 1000,
+            INVALID_URL_LANGS: {
+                sjn: true
+            },
+            PRESYNC_TIMEOUT: 15000,
+            SPEECHKIT_TIMEOUT: 5000,
+            MAX_FAV_TEXT_LENGTH: 1000,
+            SESSION_RESUME_TIME: 1000 * 60 * 30,
+            COLLAPSE_THRESHOLD: 8,
+            DICTIONARY_COUNT: 3,
+            COLLAPSED_HEIGHT: 270,
+            COLLECTION_BANNER_DELAY: 86400 * 1000, // 1 day
+            MAX_NATIVE_TTS_LENGTH: 10000,
+            ENABLE_DOM_TRACKING: true,
+            FORCE_UNIPROXY: false,
+            ENABLE_TTS_SLOWING: false,
+            ENABLE_NATIVE_ASR: false,
+            ENABLE_DIST_BANNER: false,
+            ENABLE_HISTORY_SYNC: false,
+            FORCE_SKIT_ASR_URL: null,
+            FORCE_SKIT_TTS_URL: null,
+            ENABLE_COLLECTION: false,
+            LANDING_TYPE: 'ru',
+            ENABLE_SUGGESTIONS: false,
+            SUGGESTIONS_CONF: null,
+            DISABLE_DICTIONARY: true,
+            DISABLE_EXAMPLES: true,
+            EXAMPLES_RANDOM_RANKING: false,
+            REDUCE_DICT_EXAMPLES: false,
+            NEW_DESKTOP: false,
+            ENABLE_NEW_SPELLER: false,
+            ENABLE_NEW_EXAMPLES: true,
+            LOCALIZATIONS: /** @lends DesktopMessages# */{},
+            DISABLE_DST_PREDICTOR: false,
+            ENABLE_SEO_SSR: false,
+        });
+    }());
+</script>
+<div class="trash" style="display: none;">
+    <div id="historyRecent" class="history_records" style="display: none;"></div>
+
+    <div id="relatedContent" class="relatedContent">
+        <div class="relatedContent-col relatedContent-col_left">
+            <div id="idiomDefinition" class="idiomDefinition-container state-hidden state-hidden2 state-fadeaway"></div>
+            <div id="definition" class="definition-container state-hidden state-hidden2 state-fadeaway"></div>
+            <div id="examples" class="examples-container state-fadeaway state-hidden state-hidden2"></div>
+        </div>
+        <div class="relatedContent-col relatedContent-col_right">
+            <section id="dictionary"></section><section id="relatedWords"></section>
+        </div>
+    </div>
+    <div id="declensions" class="section section_wide declensions-section state-hidden"></div>
+    <div id="userMenu settingOptions"><a id="collectionsOption"></a></div>
+    <script nonce="V8ltFVqXX5">
+        locales.themeLabels = 0;
+        locales.settingOptions = 0;
+        locales.settingOptionDescritions = 0;
+        desktopLocales.hotKeys = 0;
+    </script>
+    <div class="page page_text page_with-sticky-header">
+        <div id="sourceTranslit" class="translit_source"></div>
+        <span id="targetTranslit" class="translit_target"></span>
+    </div>
+
+    <div class="langs-panel" style="display: none;">
+        <button id="srcLangButton"
+                data-action="openSrcLanguages"
+                class="langs-button langs-button_src"
+                role="button"
+                tabindex="0"
+                aria-label="Choose target language Russian"
+                aria-label="Choose target language"
+                data-tooltip-focus="Choose target language"
+                data-tooltip-position="top">Russian</button>
+    </div>
+    <script nonce="V8ltFVqXX5">
+        Object.assign(window.config || {}, {});
+        window.locales.cardsCarousel = {};
+    </script>
+    <div id="cardsCarousel" style="display: none;"></div>
+    <script nonce="V8ltFVqXX5">
+        Object.assign(window.config || {}, {});
+        locales.speller = {
+            spellerPopupTitle: 0,
+            spellerPopupClose: 0,
+            spellerPopupText: 0,
+            revertAction: 'revert',
+            spellerBarLabel: 'maybe you meant',
+            spellerExplanation: 'You wrote {}. Maybe you meant',
+        };
+    </script>
+
+
+</div>
+        <script src="https://yastatic.net/s3/translate/v77.2/dist/scripts/bundles/text.modern.js" crossorigin="anonymous"></script>
+        <script src="https://yastatic.net/s3/translate/v77.2/dist/scripts/bundles/webspeechkit.js" crossorigin="anonymous"></script>
+        <div id="textApp"></div>
+        <script nonce="V8ltFVqXX5">
+            window.app = initTextApp(window.config);
+            if (typeof initReactTextApp === 'function') {
+                initReactTextApp(window.app, window.config);
+            }
+        </script>
+</body>
+</html>
