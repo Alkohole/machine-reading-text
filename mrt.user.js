@@ -97,7 +97,7 @@
     radioListenDiv.appendChild(radioListen);
     radioListenDiv.appendChild(document.createTextNode(" Слушать"));
     var listenInfo = document.createElement("span");
-    listenInfo.title = "Функция ''Слушать'' воспроизводит написанный текст.\nЛимит 50 000 символов на запрос.";
+    listenInfo.title = "Функция ''Слушать'' воспроизводит написанный текст.\nЛимит 20 000 символов на запрос.";
     listenInfo.innerHTML = " ⓘ";
     radioListenDiv.appendChild(listenInfo);
     settingsPanel.appendChild(radioListenDiv);
