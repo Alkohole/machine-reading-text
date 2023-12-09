@@ -3,6 +3,8 @@
 - Функция **"Слушать"** имеет лимит в 20k символов на запрос.
 - Функция **"Скачать"** имеет лимит в 1k символов на запрос. **(НЕ стабильна, вероятность сбоя 70%)**
 
+https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb5a7c
+
 ## Установка расширения:
 1. Установите расширение **[Tampermonkey](https://www.tampermonkey.net/)** (Альтернатива для Safari: **[UserScripts](https://apps.apple.com/app/userscripts/id1463298887 )**)
 2. **[«Установите Скрипт»](https://github.com/Alkohole/udr/raw/main/mrt.user.js)**
