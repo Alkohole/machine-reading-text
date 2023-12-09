@@ -105,10 +105,10 @@ window.desktopLocales = {};
                     textarea.addEventListener('input', function() {
                         let textLength = textarea.value.length;
                         
-                        if (textLength > 10000) {
+                        if (textLength > 20000) {
                             button.style.backgroundColor = "rgba(250, 69, 69, 0.8)";
                             button.style.color = "rgba(243, 235, 225, 0.8)";
-                            button.innerHTML = `${textLength}/10000`;
+                            button.innerHTML = `${textLength}/20000`;
                         } else {
                             button.style.backgroundColor = ""; // Возвращает к первоначальному стилю
                             button.style.color = ""; // Возвращает цвет текста к первоначальному
@@ -190,20 +190,20 @@ window.desktopLocales = {};
             },
             USE_FAKEAREA: true,
             MAX_FAV_ITEMS2: 2500,
-            MAX_UNIPROXY_TTS_LENGTH: 10000,
-            MAX_TTS_LENGTH: 10000,
+            MAX_UNIPROXY_TTS_LENGTH: 20000,
+            MAX_TTS_LENGTH: 20000,
             INVALID_URL_LANGS: {
                 sjn: true
             },
             PRESYNC_TIMEOUT: 15000,
             SPEECHKIT_TIMEOUT: 5000,
-            MAX_FAV_TEXT_LENGTH: 10000,
+            MAX_FAV_TEXT_LENGTH: 20000,
             SESSION_RESUME_TIME: 1000 * 60 * 30,
             COLLAPSE_THRESHOLD: 8,
             DICTIONARY_COUNT: 3,
             COLLAPSED_HEIGHT: 270,
             COLLECTION_BANNER_DELAY: 86400 * 1000, // 1 day
-            MAX_NATIVE_TTS_LENGTH: 10000,
+            MAX_NATIVE_TTS_LENGTH: 20000,
             ENABLE_DOM_TRACKING: true,
             FORCE_UNIPROXY: false,
             ENABLE_TTS_SLOWING: false,
