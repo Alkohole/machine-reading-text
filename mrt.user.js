@@ -10,6 +10,10 @@
 // @exclude      https://Alkohole.github.io/udr/*
 // @grant        none
 // @icon         https://storage.yandexcloud.net/cloud-www-assets/region-assets/ru/favicon/favicon.ico
+// @connect api.browser.yandex.ru
+// @downloadURL https://github.com/Alkohole/udr/raw/main/mrt.user.js
+// @homepageURL https://github.com/Alkohole/udr/issues
+// @updateURL https://github.com/Alkohole/udr/raw/main/mrt.user.js
 // ==/UserScript==
 
 (function() {
