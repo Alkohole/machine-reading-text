@@ -108,7 +108,7 @@ window.desktopLocales = {};
                     textarea.addEventListener('input', function() {
                         let textLength = textarea.value.length;
                         
-                        if (textLength > 10000) {
+                        if (textLength > 20000) {
                             button.style.backgroundColor = "rgba(250, 69, 69, 0.8)";
                             button.style.color = "rgba(243, 235, 225, 0.8)";
                             button.innerHTML = `${textLength}/20000`;
