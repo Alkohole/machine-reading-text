@@ -5,7 +5,7 @@
   
 > [!Note]
 > У меня нет нужды чинить функцию **"Скачать"**, на данный момент она НЕ стабильна, а вероятность сбоя составляет ≈75%.
-> Если вам интересно помоч мне починить функцию **"Скачать"**, пожалуйста, предлогайте **[Pull requests](https://github.com/Alkohole/udr/pulls)**, сам линк **[Скрипта](https://github.com/Alkohole/udr/blame/09643e1073467850e25a04f4fb7e56f6cc73a9e5/down.html#L81)**.
+> Если вам интересно помоч мне починить функцию **"Скачать"**, пожалуйста, предлогайте **[Pull requests](https://github.com/Alkohole/udr/pulls)**, сам линк **[Скрипта](https://github.com/Alkohole/udr/blob/main/down.html#L81)**.
 
 https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb5a7c
 
