@@ -2,7 +2,7 @@
 // @name         [MRT] - Machine reading text
 // @name:ru      [MRT] - Машинное чтение текста
 // @namespace    http://tampermonkey.net/
-// @version      0.4.6
+// @version      0.4.7
 // @description  Display custom HTML page from URL on button click with settings panel
 // @author       Alkohole
 // @match        *://*/*
@@ -93,7 +93,7 @@
     radioListenDiv.appendChild(radioListen);
     radioListenDiv.appendChild(document.createTextNode(" Слушать"));
     var listenInfo = document.createElement("span");
-    listenInfo.title = "Функция ''Слушать'' воспроизводит написанный текст.\nЛимит 20 000 символов на запрос.";
+    listenInfo.title = "Функция ''Слушать'' воспроизводит написанный текст.\nЛимит 50 000 символов на запрос.";
     listenInfo.innerHTML = " ⓘ";
     radioListenDiv.appendChild(listenInfo);
     settingsPanel.appendChild(radioListenDiv);
