@@ -121,8 +121,8 @@ window.desktopLocales = {};
         
 <script nonce="V8ltFVqXX5">
     Object.assign(window.config, {
-        SID: '9c191a3f.21b77936.7f2c5246.47875647d22747',
-        VER: 'v77.2',
+        SID: '6ededb7d.bba78756.8b78f673.47875647d22747',
+        VER: 'v125.0',
         IS_SEARCH_BOT: false,
         UID: null,
         CLCK_URL: 'https://yandex.com/clck/click/',
@@ -152,7 +152,7 @@ window.desktopLocales = {};
         /** @lends DesktopConfig# */Object.assign(window.config, {
             SRV: 'tr-text',
             FAMILY: true,
-            CSRF_TOKEN: '683fd3e9f32e3ddfabde84340c50f502413b1e1b:63977b12',
+            CSRF_TOKEN: 'f7c312b3d9c72061dde079dae508928a9a72bbcb:65787abb',
             IS_FIRST_VISIT: false,
             TTS_URL: 'https://tts.voicetech.yandex.net/tts',
             UNIPROXY_URL: 'wss://uniproxy.alice.yandex.net/uni.ws',
@@ -280,98 +280,7 @@ window.desktopLocales = {};
             spellerExplanation: 'You wrote {}. Maybe you meant',
         };
     </script>
-            <!-- <button id="downloadButton">Скачать аудио</button>
-            <script>
-                // Функция для преобразования AudioBuffer в WAV Blob
-                function bufferToWav(buffer, sampleRate) {
-                    const MAX_BLOB_SIZE = 6 * 1024 * 1024; // 6MB in bytes
-                    const blobs = [];
-                    const numChannels = buffer.numberOfChannels;
-                    const numSamples = buffer.length;
-                    const numFrames = numSamples * numChannels;
-                    const dataSize = numFrames * 2;
-                    const bufferLen = 44 + dataSize;
-                    const view = new DataView(new ArrayBuffer(bufferLen));
-                    const channels = [];
-                    let offset = 0;
-                    for (let i = 0; i < numChannels; i++) {
-                        channels.push(buffer.getChannelData(i));
-                    }
-                    function writeUTFBytes(view, offset, string) {
-                        const length = string.length;
-                        for (let i = 0; i < length; i++) {
-                            view.setUint8(offset + i, string.charCodeAt(i));
-                        }
-                    }
-                    writeUTFBytes(view, 0, 'RIFF');
-                    view.setUint32(4, 36 + dataSize, true);
-                    writeUTFBytes(view, 8, 'WAVE');
-                    writeUTFBytes(view, 12, 'fmt ');
-                    view.setUint32(16, 16, true);
-                    view.setUint16(20, 1, true);
-                    view.setUint16(22, numChannels, true);
-                    view.setUint32(24, sampleRate, true);
-                    view.setUint32(28, sampleRate * 4, true);
-                    view.setUint16(32, numChannels * 2, true);
-                    view.setUint16(34, 16, true);
-                    writeUTFBytes(view, 36, 'data');
-                    view.setUint32(40, dataSize, true);
-                    offset = 44;
-                    for (let i = 0; i < numSamples; i++) {
-                        for (let channel = 0; channel < numChannels; channel++) {
-                            const sample = Math.max(-1, Math.min(1, channels[channel][i]));
-                            view.setInt16(offset, sample < 0 ? sample * 0x8000 : sample * 0x7FFF, true);
-                            offset += 2;
-                        }
-                    }
-                    // Check if the blob size exceeds the max size
-                    if (view.byteLength > MAX_BLOB_SIZE) {
-                        const numSplits = Math.ceil(view.byteLength / MAX_BLOB_SIZE);
-                        
-                        for (let i = 0; i < numSplits; i++) {
-                            const startByte = i * MAX_BLOB_SIZE;
-                            const endByte = Math.min((i + 1) * MAX_BLOB_SIZE, view.byteLength);
-                            const blob = new Blob([view.buffer.slice(startByte, endByte)], { type: 'audio/wav' });
-                            blobs.push({ fileName: `audio_record_tts_part_${i + 1}.wav`, blob: blob });
-                        }
-                    } else {
-                        const blob = new Blob([view], { type: 'audio/wav' });
-                        blobs.push({ fileName: 'audio_record_tts.wav', blob: blob });
-                    }
-                    return blobs;
-                }
-                let audioBlob;  // Глобальная переменная для хранения аудио Blob
-                const OriginalAudioContext = window.AudioContext || window.webkitAudioContext;
-                const originalAudioBufferSourceNode = OriginalAudioContext.prototype.createBufferSource;
-                OriginalAudioContext.prototype.createBufferSource = function() {
-                    const bufferSource = originalAudioBufferSourceNode.apply(this, arguments);
-                    Object.defineProperty(bufferSource, 'buffer', {
-                        set: function(audioBuffer) {
-                            if (audioBuffer) {
-                                audioBlob = bufferToWav(audioBuffer, audioBuffer.sampleRate);
-                            }
-                        }
-                    });
-                    return bufferSource;
-                };
-                // Код для кнопки скачивания
-                document.getElementById("downloadButton").addEventListener("click", function() {
-                    if (audioBlob && audioBlob.length > 0) {
-                        audioBlob.forEach((audioBlobInfo, index) => {
-                            const url = window.URL.createObjectURL(audioBlobInfo.blob);
-                            const a = document.createElement("a");
-                            a.style.display = "none";
-                            a.href = url;
-                            a.download = audioBlobInfo.fileName;
-                            document.body.appendChild(a);
-                            a.click();
-                            window.URL.revokeObjectURL(url);
-                        });
-                        // Очистка audioBlob после скачивания
-                        audioBlob = [];
-                    }
-                });
-            </script> -->
+
 </div>
         <script src="https://yastatic.net/s3/translate/v77.2/dist/scripts/bundles/text.modern.js" crossorigin="anonymous"></script>
         <script src="https://yastatic.net/s3/translate/v77.2/dist/scripts/bundles/webspeechkit.js" crossorigin="anonymous"></script>
