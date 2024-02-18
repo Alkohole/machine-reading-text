@@ -37,7 +37,6 @@ window.desktopLocales = {};
         padding-left: 8px;
         padding-right: 7px;
         padding-bottom: 10px;
-        background-color: rgba(243, 235, 225, 0.2);
         border: solid 2px;
         border-color: rgba(255, 140, 0, 0.2);
         margin-top: 10px;
@@ -53,9 +52,44 @@ window.desktopLocales = {};
         transition: all 0.5s ease;
     }
     #textSpeaker:hover{
-        background-color: rgba(248, 233, 214, 0.8);
         border-color: rgba(255, 140, 0, 0.6);
         color: rgba(255, 140, 0, .8);
+    }
+    @-webkit-keyframes pulse{
+        0%{
+            box-shadow:0 0 0 0 rgba(255, 140, 0,.1);
+            box-shadow:0 0 0 0 rgba(255, 140, 0, 0.9);
+        }
+        80%{
+            box-shadow:0 0 0 12px transparent
+        }to{
+            box-shadow:0 0 0 0 transparent
+        }
+    }
+    @keyframes pulse{
+        0%{
+            box-shadow:0 0 0 0 rgba(255, 140, 0,.1);
+            box-shadow:0 0 0 0 rgba(255, 140, 0, 0.9);
+        }
+        80%{
+            box-shadow:0 0 0 12px transparent
+        }to{
+            box-shadow:0 0 0 0 transparent
+        }
+    }
+    .boxButton_tts{
+        background-color: rgba(255, 140, 0, 0.2);
+        &::after{content: " ▶";}
+    }
+    .boxButton_tts.state-invalid{content: "";&:after{content:"";}&::before{content:"";}} /* Видимо этот класс поистине инвалид... */
+    .boxButton_tts.state-loading{
+        &:after{content: "...";}
+    }
+    .boxButton_tts.state-playing{
+        box-shadow:0 0 0 transparent;
+        -webkit-animation:pulse 1.8s infinite;
+        animation:pulse 1.8s infinite;
+        &:after{content: "Stop";}
     }
 </style>
 <script nonce="V8ltFVqXX5">
@@ -73,7 +107,7 @@ window.desktopLocales = {};
             </div>
         
             <div class="box-panel box-panel_bottom" data-box-panel="">
-                <button id="textSpeaker" class="boxButton boxButton_tts button button_view_clear button_size_l button_icn button_round state-disabled">▶</button>
+                <button id="textSpeaker" class="boxButton boxButton_tts button button_view_clear button_size_l button_icn button_round state-disabled"> ▶</button>
             </div>
         
             <script>
@@ -109,10 +143,17 @@ window.desktopLocales = {};
                             button.style.backgroundColor = "rgba(250, 69, 69, 0.8)";
                             button.style.color = "rgba(243, 235, 225, 0.8)";
                             button.innerHTML = `${textLength}/20000`;
+                            
+                            const afterElement = getComputedStyle(button).getPropertyValue("content");
+                            if (afterElement !== 'none') {
+                                button.style.setProperty('--before-and-after', 'none');
+                            }
                         } else {
-                            button.style.backgroundColor = ""; // Возвращает к первоначальному стилю
-                            button.style.color = ""; // Возвращает цвет текста к первоначальному
-                            button.innerHTML = "▶";
+                            button.style.backgroundColor = '';
+                            button.style.color = '';
+                            button.innerHTML = '';
+                            
+                            button.style.setProperty('--before-and-after', 'none');
                         }
                     });
                 });
