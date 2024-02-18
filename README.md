@@ -29,6 +29,19 @@ https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb
 1. Установите расширение **[Tampermonkey](https://www.tampermonkey.net/)** (Альтернатива для Safari: **[UserScripts](https://apps.apple.com/app/userscripts/id1463298887 )**).
 2. **[Установите Скрипт](https://github.com/Alkohole/udr/raw/main/mrt.user.js)**.
 
+
+## Обновление скрипта:
+### Ручное обновление (Рекомендуется):
+
+1. **[Перейдите по ссылке](https://github.com/Alkohole/udr/raw/main/mrt.user.js)**.
+2. Нажмите кнопку **Переустановить** / **Обновить**
+
+### Авто обновление (Не рекомендуется):
+
+1. В расширениях браужера откройте расширение **Tampermonkey**.
+2. Войдите в раздел **Утилиты**.
+3. Нажмите на кнопку **Проверить обновления скриптов**.
+
 ## Примечание:
 
 | Кнопка | Действие |
