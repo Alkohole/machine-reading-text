@@ -120,7 +120,7 @@
     var iframe = document.createElement("iframe");
     iframe.id = 'customIframe'; // Добавляем уникальный идентификатор
     iframe.style.width = "300px";
-    iframe.style.height = "300px";
+    iframe.style.height = "310px";
     iframe.style.position = "fixed";
     iframe.style.bottom = "80px";
     iframe.style.right = "10px";
