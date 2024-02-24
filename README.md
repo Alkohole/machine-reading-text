@@ -59,11 +59,11 @@ https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb
 ### Голоса:
 | TTS Name | Model | Examples |
 |----|----|----|
-| **Oksana** (♀) _(дефолтный)_| `oksana.gpu` |[Oksana.wav](URL_вашего_аудиофайла)|
-| **Jane** (♀) | `jane.gpu` |[Jane.wav](URL_вашего_аудиофайла)|
-| **Omazh** (♀) | `omazh.gpu` |[Omazh.wav](URL_вашего_аудиофайла)|
-| **Ermil** (♂) | `ermil.gpu` |[Ermil.wav](URL_вашего_аудиофайла)|
-| **Zahar** (♂) | `zahar.gpu` |[Zahar.wav](URL_вашего_аудиофайла)|
+| **Oksana** (♀) _(дефолтный)_| `oksana.gpu` |[Oksana.wav](https://github.com/Alkohole/udr/raw/main/examples/Oksana.wav)|
+| **Jane** (♀) | `jane.gpu` |[Jane.wav](https://github.com/Alkohole/udr/raw/main/examples/Jane.wav)|
+| **Omazh** (♀) | `omazh.gpu` |[Omazh.wav](https://github.com/Alkohole/udr/raw/main/examples/Omazh.wav)|
+| **Ermil** (♂) | `ermil.gpu` |[Ermil.wav](https://github.com/Alkohole/udr/raw/main/examples/Ermil.wav)|
+| **Zahar** (♂) | `zahar.gpu` |[Zahar.wav](https://github.com/Alkohole/udr/raw/main/examples/Zahar.wav)|
 
 ### ⚠️ Возможные планы:
 - [ ] Пауза.
