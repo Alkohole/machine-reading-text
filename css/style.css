@@ -24,13 +24,15 @@ body{
     margin: 12px;
 }
 .boxButton{
+    display: block;
+    float: left;
     padding-left: 8px;
     padding-right: 7px;
     padding-bottom: 10px;
     border: solid 2px;
     border-color: rgba(255, 140, 0, 0.2);
     margin-top: 10px;
-    width: 100%;
+    width: 210px;
     height: 40px;
     font-size: 22px;
     border-bottom-left-radius: 30px;
@@ -86,4 +88,31 @@ body{
     -webkit-animation:pulse 1.8s infinite;
     animation:pulse 1.8s infinite;
     &:after{content: " ■";}
+}
+.selector-models{
+    display: block;
+    float: right;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    padding-left: 8px;
+    padding-right: 7px;
+    padding-bottom: 10px;
+    border: solid 2px;
+    border-color: rgba(255, 140, 0, 0.2);
+    margin-top: 10px;
+    width: 125px;
+    height: 40px;
+    font-size: 22px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: rgba(184, 104, 0, 0.6);
+    cursor: pointer;
+    transition: all 0.5s ease;
+    &:hover{
+        border-color: rgba(255, 140, 0, 0.6);
+        color: rgba(255, 140, 0, .8);
+    }
+    &::-ms-expand{display: none;}
 }
