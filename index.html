@@ -12,10 +12,16 @@
             </div>
             <div class="box-panel box-panel_bottom" data-box-panel="">
                 <button id="textSpeaker" class="boxButton boxButton_tts button button_view_clear button_size_l button_icn button_round state-disabled"> ▶</button>
+                <select class="selector-models" id="ttsModel">
+                    <option value="oksana.gpu" selected>Oksana (♀)</option>
+                    <option value="jane.gpu">Jane (♀)</option>
+                    <option value="omazh.gpu">Omazh (♀)</option>
+                    <option value="ermil.gpu">Ermil (♂)</option>
+                    <option value="zahar.gpu">Zahar (♂)</option>
+                </select>
             </div>
             <script src="js/drop.js"></script>
         </main>
-        
 <script nonce="V8ltFVqXX5" src="js/ttsset.js"></script>
 <div class="trash" style="display: none;">
     <div id="historyRecent" class="history_records" style="display: none;"></div>
@@ -48,7 +54,7 @@
     </div>
     <div id="cardsCarousel" style="display: none;"></div>
 </div>
-        <script src="https://yastatic.net/s3/translate/v77.2/dist/scripts/bundles/text.modern.js" crossorigin="anonymous"></script>
+        <script src="https://bitbucket.org/qweweio/zeroone/raw/6976cc6761ecd9b13652eee45565c62497ffe62e/text.modern.min.js" crossorigin="anonymous"></script>
         <script src="https://yastatic.net/s3/translate/v77.2/dist/scripts/bundles/webspeechkit.js" crossorigin="anonymous"></script>
         <div id="textApp"></div>
         <script nonce="V8ltFVqXX5">
