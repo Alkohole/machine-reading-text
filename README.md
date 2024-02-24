@@ -57,13 +57,13 @@ https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb
 - Имеется счетчик количества символов в окне (Если превышение лимита - вы увидите сообщение).
 
 ### Голоса:
-| TTS Name | Model |
-|----|---------|
-| **Oksana** (♀) _(дефолтный)_| `oksana.gpu` |
-| **Jane** (♀) | `jane.gpu` |
-| **Omazh** (♀) | `omazh.gpu` |
-| **Ermil** (♂) | `ermil.gpu` |
-| **Zahar** (♂) | `zahar.gpu` |
+| TTS Name | Model | Examples |
+|----|----|----|
+| **Oksana** (♀) _(дефолтный)_| `oksana.gpu` |[Oksana.wav](URL_вашего_аудиофайла)|
+| **Jane** (♀) | `jane.gpu` |[Jane.wav](URL_вашего_аудиофайла)|
+| **Omazh** (♀) | `omazh.gpu` |[Omazh.wav](URL_вашего_аудиофайла)|
+| **Ermil** (♂) | `ermil.gpu` |[Ermil.wav](URL_вашего_аудиофайла)|
+| **Zahar** (♂) | `zahar.gpu` |[Zahar.wav](URL_вашего_аудиофайла)|
 
 ### ⚠️ Возможные планы:
 - [ ] Пауза.
