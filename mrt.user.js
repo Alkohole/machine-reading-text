@@ -2,7 +2,7 @@
 // @name         [MRT] - Machine reading text
 // @name:ru      [MRT] - Машинное чтение текста
 // @namespace    http://tampermonkey.net/
-// @version      0.4.7
+// @version      0.4.8
 // @description  Display custom HTML page from URL on button click with settings panel
 // @author       Alkohole
 // @match        *://*/*
@@ -19,13 +19,20 @@
 (function() {
     'use strict';
 
-    // Проверка, созданы ли уже элементы
-    if (document.getElementById('customButton') || document.getElementById('customSettingsButton') || document.getElementById('customIframe')) {
+    var customButton = document.getElementById('customButton');
+    var customSettingsButton = document.getElementById('customSettingsButton');
+    var customIframe = document.getElementById('customIframe');
+
+    if (customButton && customSettingsButton && customIframe && settingsPanel) {
+
+        if (window.top !== window.self) {
+            document.body.removeChild(customButton);
+            document.body.removeChild(customSettingsButton);
+            document.body.removeChild(customIframe);
+            document.body.removeChild(settingsPanel);
+        }
         return;
     }
-
-
-
     // Создаем кнопку для открытия страницы
     var button = document.createElement("button");
     button.id = 'customButton'; // Добавляем уникальный идентификатор
@@ -159,9 +166,10 @@
         }
     });
 
-    // Добавляем элементы на страницу
-    document.body.appendChild(button);
-    document.body.appendChild(settingsButton);
-    document.body.appendChild(settingsPanel);
-    document.body.appendChild(iframe);
+    if (window.top === window.self) {
+        document.body.appendChild(button);
+        document.body.appendChild(settingsButton);
+        document.body.appendChild(settingsPanel);
+        document.body.appendChild(iframe);
+    }
 })();
