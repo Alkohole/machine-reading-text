@@ -1,3 +1,13 @@
+body{
+    position: relative;
+    margin: 12px;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 22px;
+}
+button{
+    font-size: 22px;
+}
 textarea{
     position: relative;
     margin: 0px;
@@ -19,12 +29,8 @@ textarea:focus {
     border-color: rgba(255, 140, 0, 0.6);
     color: rgba(0, 0, 0, 1);
 }
-body{
-    background-color: rgba(0, 0, 0, 0);
-    margin: 12px;
-}
 .boxButton{
-    display: block;
+    display: flex;
     float: left;
     padding-left: 8px;
     padding-right: 7px;
@@ -35,6 +41,8 @@ body{
     width: 140px;
     height: 40px;
     font-size: 22px;
+    justify-content: center;
+    align-items: center;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     color: rgba(184, 104, 0, 0.6);
@@ -73,11 +81,13 @@ body{
 }
 .boxButton_tts{
     background-color: rgba(255, 140, 0, 0.2);
+    font-size: 22px;
     &::after{content: " ▶";}
 }
 .boxButton_tts.state-invalid{content: "";&:after{content:"";}&::before{content:"";}} /* Видимо этот класс поистине инвалид... */
 .boxButton_tts.state-loading{
     border-top-right-radius: 30px;
+    font-size: 22px;
     &:after{content: " 三ᕕ( ᐛ )ᕗ";}
 }
 .boxButton_tts.state-playing{
@@ -86,20 +96,20 @@ body{
     box-shadow:0 0 0 transparent;
     -webkit-animation:pulse 1.8s infinite;
     animation:pulse 1.8s infinite;
+    font-size: 22px;
     &:after{content: " ■";}
 }
 .selector-models{
-    display: block;
+    display: flex;
     float: right;
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-    padding-left: 8px;
-    padding-right: 7px;
-    padding-bottom: 10px;
     border: solid 2px;
     border-color: rgba(255, 140, 0, 0.2);
     margin-top: 10px;
+    justify-content: center;
+    align-items: center;
     width: 125px;
     height: 40px;
     font-size: 22px;
