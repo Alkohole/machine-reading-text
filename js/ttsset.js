@@ -69,7 +69,7 @@ Object.assign(window.config, {
                 }
             },
         },
-        USE_FAKEAREA: true,
+        USE_FAKEAREA: false,
         MAX_FAV_ITEMS2: 2500,
         MAX_UNIPROXY_TTS_LENGTH: 20000,
         MAX_TTS_LENGTH: 20000,
