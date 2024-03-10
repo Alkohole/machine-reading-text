@@ -2,13 +2,14 @@
 <html lang="ru" id="app" class="app application state-unresolved state-db_inactive  state-translatorExpanded  ">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body data-text="" data-lang="" data-source-lang="ru" data-target-lang="en">
         <main class="page-content">
             <div id="textbox" class="box box_src state-empty">
                 <div id="fakeArea" class="fakearea textinput textlayer textlayer_src"></div>
-                <textarea id="textarea" aria-labelledby="srcLabel"></textarea>
+                <textarea id="textarea"></textarea>
             </div>
             <div class="box-panel box-panel_bottom" data-box-panel="">
                 <button id="textSpeaker" class="boxButton boxButton_tts button button_view_clear button_size_l button_icn button_round state-disabled"> ▶</button>
@@ -16,45 +17,21 @@
                     <option value="oksana.gpu" selected>Oksana (♀)</option>
                     <option value="jane.gpu">Jane (♀)</option>
                     <option value="omazh.gpu">Omazh (♀)</option>
+                    <option value="nastya.gpu">Nastya (♀)</option>
+                    <option value="sasha.gpu">Sasha (♀)</option>
+                    <option value="tatyana_abramova.gpu">Tatyana Abramova (♀)</option>
                     <option value="ermil.gpu">Ermil (♂)</option>
                     <option value="zahar.gpu">Zahar (♂)</option>
+                    <option value="kolya.gpu">Kolya (♂)</option>
+                    <option value="kostya.gpu">Kostya (♂)</option>
+                    <option value="anton_samokhvalov.gpu">Anton Samokhvalov (♂)</option>
+
                 </select>
             </div>
             <script src="js/drop.js"></script>
         </main>
-<script nonce="V8ltFVqXX5" src="js/ttsset.js"></script>
-<div class="trash" style="display: none;">
-    <div id="historyRecent" class="history_records" style="display: none;"></div>
-    <div id="relatedContent" class="relatedContent">
-        <div class="relatedContent-col relatedContent-col_left">
-            <div id="idiomDefinition" class="idiomDefinition-container state-hidden state-hidden2 state-fadeaway"></div>
-            <div id="definition" class="definition-container state-hidden state-hidden2 state-fadeaway"></div>
-            <div id="examples" class="examples-container state-fadeaway state-hidden state-hidden2"></div>
-        </div>
-        <div class="relatedContent-col relatedContent-col_right">
-            <section id="dictionary"></section><section id="relatedWords"></section>
-        </div>
-    </div>
-    <div id="declensions" class="section section_wide declensions-section state-hidden"></div>
-    <div id="userMenu settingOptions"><a id="collectionsOption"></a></div>
-    <div class="page page_text page_with-sticky-header">
-        <div id="sourceTranslit" class="translit_source"></div>
-        <span id="targetTranslit" class="translit_target"></span>
-    </div>
-    <div class="langs-panel" style="display: none;">
-        <button id="srcLangButton"
-                data-action="openSrcLanguages"
-                class="langs-button langs-button_src"
-                role="button"
-                tabindex="0"
-                aria-label="Choose target language Russian"
-                aria-label="Choose target language"
-                data-tooltip-focus="Choose target language"
-                data-tooltip-position="top">Russian</button>
-    </div>
-    <div id="cardsCarousel" style="display: none;"></div>
-</div>
-        <script src="https://bitbucket.org/qweweio/zeroone/raw/6976cc6761ecd9b13652eee45565c62497ffe62e/text.modern.min.js" crossorigin="anonymous"></script>
+        <script nonce="V8ltFVqXX5" src="js/ttsset.js"></script>
+        <script src="https://bitbucket.org/qweweio/zeroone/raw/a39d2a58c5aed2048547d393ce1d7cb7105e62db/text.modern.min.js" crossorigin="anonymous"></script>
         <script src="https://yastatic.net/s3/translate/v77.2/dist/scripts/bundles/webspeechkit.js" crossorigin="anonymous"></script>
         <div id="textApp"></div>
         <script nonce="V8ltFVqXX5">
