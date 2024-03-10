@@ -64,14 +64,14 @@ https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb
 | **Oksana** (♀) _(дефолтный)_| `oksana.gpu` |[Oksana.wav](https://github.com/Alkohole/udr/raw/main/examples/Oksana.wav)|
 | **Jane** (♀) | `jane.gpu` |[Jane.wav](https://github.com/Alkohole/udr/raw/main/examples/Jane.wav)|
 | **Omazh** (♀) | `omazh.gpu` |[Omazh.wav](https://github.com/Alkohole/udr/raw/main/examples/Omazh.wav)|
-| **Nastya** (♀) | `nastya.gpu` |_none_|
-| **Sasha** (♀) | `sasha.gpu` |_none_|
-| **Tatyana Abramova** (♀) | `tatyana_abramova.gpu` |_none_|
+| **Nastya** (♀) | `nastya.gpu` |[Nastya.wav](https://github.com/Alkohole/udr/raw/main/examples/Nastya.wav)|
+| **Sasha** (♀) | `sasha.gpu` |[Sasha.wav](https://github.com/Alkohole/udr/raw/main/examples/Sasha.wav)|
+| **Tatyana Abramova** (♀) | `tatyana_abramova.gpu` |[Tatyana_Abramova.wav](https://github.com/Alkohole/udr/raw/main/examples/Tatyana_Abramova.wav)|
 | **Ermil** (♂) | `ermil.gpu` |[Ermil.wav](https://github.com/Alkohole/udr/raw/main/examples/Ermil.wav)|
 | **Zahar** (♂) | `zahar.gpu` |[Zahar.wav](https://github.com/Alkohole/udr/raw/main/examples/Zahar.wav)|
-| **Kolya** (♀) | `kolya.gpu` |_none_|
-| **Kostya** (♀) | `kostya.gpu` |_none_|
-| **AntonSamokhvalov** (♀) | `anton_samokhvalov.gpu` |_none_|
+| **Kolya** (♀) | `kolya.gpu` |[Kolya.wav](https://github.com/Alkohole/udr/raw/main/examples/Kolya.wav)|
+| **Kostya** (♀) | `kostya.gpu` |[Kostya.wav](https://github.com/Alkohole/udr/raw/main/examples/Kostya.wav)|
+| **AntonSamokhvalov** (♀) | `anton_samokhvalov.gpu` |[Anton_Samokhvalov.wav](https://github.com/Alkohole/udr/raw/main/examples/Anton_Samokhvalov.wav)|
 
 ### ⚠️ Возможные планы:
 - [ ] Пауза. _(Функция найдена)_
