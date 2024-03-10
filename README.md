@@ -6,7 +6,7 @@
 |  | From | To | Date |
 |---|---|---|---|
 | Расширение | ~~v0.4.7~~ | **v0.4.8** | 01.03.24 |
-| Страница окна | ~~v0.2.3~~ | **v0.2.6** | 24.02.24 |
+| Страница окна | ~~v0.2.6~~ | **v0.3** | 10.03.24 |
 
 <details>
 <summary>
@@ -56,7 +56,7 @@ https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb
 
 - Имеется обработчик дропа в окно ввода (Выделите текст и перетащите его в окно ввода, ранее находящийся в окне текст автоматически стирается).
 - Имеется счетчик количества символов в окне (Если превышение лимита - вы увидите сообщение).
-- Имеется выбор голосов озвучки: 3 женских и 2 мужских голоса. (**Oksana** таже самая **Alena**)
+- Имеется выбор голосов озвучки: 6 женских и 5 мужских голоса. (**Oksana** таже самая **Alena**)
 
 ### Голоса:
 | TTS Name | Model | Examples |
@@ -64,15 +64,21 @@ https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb
 | **Oksana** (♀) _(дефолтный)_| `oksana.gpu` |[Oksana.wav](https://github.com/Alkohole/udr/raw/main/examples/Oksana.wav)|
 | **Jane** (♀) | `jane.gpu` |[Jane.wav](https://github.com/Alkohole/udr/raw/main/examples/Jane.wav)|
 | **Omazh** (♀) | `omazh.gpu` |[Omazh.wav](https://github.com/Alkohole/udr/raw/main/examples/Omazh.wav)|
+| **Nastya** (♀) | `nastya.gpu` |_none_|
+| **Sasha** (♀) | `sasha.gpu` |_none_|
+| **Tatyana Abramova** (♀) | `tatyana_abramova.gpu` |_none_|
 | **Ermil** (♂) | `ermil.gpu` |[Ermil.wav](https://github.com/Alkohole/udr/raw/main/examples/Ermil.wav)|
 | **Zahar** (♂) | `zahar.gpu` |[Zahar.wav](https://github.com/Alkohole/udr/raw/main/examples/Zahar.wav)|
+| **Kolya** (♀) | `kolya.gpu` |_none_|
+| **Kostya** (♀) | `kostya.gpu` |_none_|
+| **AntonSamokhvalov** (♀) | `anton_samokhvalov.gpu` |_none_|
 
 ### ⚠️ Возможные планы:
 - [ ] Пауза. _(Функция найдена)_
 - [ ] Скачивание. _(Функция найдена)_
 - [ ] Визуализация блоков озвучки.
 - [ ] Таймер.
-- [ ] Регулировка громкости.
+- [ ] Регулировка громкости. _(Не возможно на уровне TTS)_
 - [ ] Переосмысление логики.
 - [ ] Отчистка кеша.
 - [x] Выбор голоса озвучки.
@@ -103,6 +109,11 @@ https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb
 <br>
 
 # Окно сообщений:
+
+> [!NOTE]
+> <sup>_Add 10.03.24_</sup> <br>
+> Не представлюя как я умудрился пропустить еще 6 моделей TTS... Вроде бы они не работали раньше...<br>
+> В дополнение, я чуть почистил скрипт TTS... Надо бы еще чуток почитить...
 
 > [!NOTE]
 > <sup>_Add 24.02.24_</sup> <br>
