@@ -6,8 +6,7 @@
 // @description  Display custom HTML page from URL on button click with settings panel
 // @author       Alkohole
 // @match        *://*/*
-// @exclude      https://librettolab.xyz/udr/*
-// @exclude      https://Alkohole.github.io/udr/*
+// @exclude      https://alkohole.github.io/machine-reading-text/*
 // @grant        none
 // @icon         https://storage.yandexcloud.net/cloud-www-assets/region-assets/ru/favicon/favicon.ico
 // @connect api.browser.yandex.ru
@@ -99,7 +98,7 @@
     var radioListen = document.createElement("input");
     radioListen.type = "radio";
     radioListen.name = "iframeOption";
-    radioListen.value = "https://Alkohole.github.io/udr/index.html";
+    radioListen.value = "https://alkohole.github.io/machine-reading-text/index.html";
     radioListen.checked = true;
     radioListenDiv.appendChild(radioListen);
     radioListenDiv.appendChild(document.createTextNode(" Слушать"));
@@ -113,7 +112,7 @@
     var radioDownload = document.createElement("input");
     radioDownload.type = "radio";
     radioDownload.name = "iframeOption";
-    radioDownload.value = "https://Alkohole.github.io/udr/down.html";
+    radioDownload.value = "https://Alkohole.github.io/machine-reading-text/down.html";
     radioDownloadDiv.appendChild(radioDownload);
     radioDownloadDiv.appendChild(document.createTextNode(" Скачать (Бета)"));
     var betaInfo = document.createElement("span");
