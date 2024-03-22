@@ -29,13 +29,13 @@ https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb
 ## Установка расширения:
 
 1. Установите расширение **[Tampermonkey](https://www.tampermonkey.net/)** (Альтернатива для Safari: **[UserScripts](https://apps.apple.com/app/userscripts/id1463298887 )**).
-2. **[Установите Скрипт](https://github.com/Alkohole/udr/raw/main/mrt.user.js)**.
+2. **[Установите Скрипт](https://github.com/Alkohole/machine-reading-text/raw/main/mrt.user.js)**.
 
 
 ## Обновление скрипта:
 ### Ручное обновление (Рекомендуется):
 
-1. **[Перейдите по ссылке](https://github.com/Alkohole/udr/raw/main/mrt.user.js)**.
+1. **[Перейдите по ссылке](https://github.com/Alkohole/machine-reading-text/raw/main/mrt.user.js)**.
 2. Нажмите кнопку **Перезаписать**
 
 ### Авто обновление (Не рекомендуется):
@@ -61,17 +61,17 @@ https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb
 ### Голоса:
 | TTS Name | Model | Examples |
 |----|----|----|
-| **Oksana** (♀) _(дефолтный)_| `oksana.gpu` |[Oksana.wav](https://github.com/Alkohole/udr/raw/main/examples/Oksana.wav)|
-| **Jane** (♀) | `jane.gpu` |[Jane.wav](https://github.com/Alkohole/udr/raw/main/examples/Jane.wav)|
-| **Omazh** (♀) | `omazh.gpu` |[Omazh.wav](https://github.com/Alkohole/udr/raw/main/examples/Omazh.wav)|
-| **Nastya** (♀) | `nastya.gpu` |[Nastya.wav](https://github.com/Alkohole/udr/raw/main/examples/Nastya.wav)|
-| **Sasha** (♀) | `sasha.gpu` |[Sasha.wav](https://github.com/Alkohole/udr/raw/main/examples/Sasha.wav)|
-| **Tatyana Abramova** (♀) | `tatyana_abramova.gpu` |[Tatyana_Abramova.wav](https://github.com/Alkohole/udr/raw/main/examples/Tatyana_Abramova.wav)|
-| **Ermil** (♂) | `ermil.gpu` |[Ermil.wav](https://github.com/Alkohole/udr/raw/main/examples/Ermil.wav)|
-| **Zahar** (♂) | `zahar.gpu` |[Zahar.wav](https://github.com/Alkohole/udr/raw/main/examples/Zahar.wav)|
-| **Kolya** (♀) | `kolya.gpu` |[Kolya.wav](https://github.com/Alkohole/udr/raw/main/examples/Kolya.wav)|
-| **Kostya** (♀) | `kostya.gpu` |[Kostya.wav](https://github.com/Alkohole/udr/raw/main/examples/Kostya.wav)|
-| **AntonSamokhvalov** (♀) | `anton_samokhvalov.gpu` |[Anton_Samokhvalov.wav](https://github.com/Alkohole/udr/raw/main/examples/Anton_Samokhvalov.wav)|
+| **Oksana** (♀) _(дефолтный)_| `oksana.gpu` |[Oksana.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Oksana.wav)|
+| **Jane** (♀) | `jane.gpu` |[Jane.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Jane.wav)|
+| **Omazh** (♀) | `omazh.gpu` |[Omazh.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Omazh.wav)|
+| **Nastya** (♀) | `nastya.gpu` |[Nastya.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Nastya.wav)|
+| **Sasha** (♀) | `sasha.gpu` |[Sasha.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Sasha.wav)|
+| **Tatyana Abramova** (♀) | `tatyana_abramova.gpu` |[Tatyana_Abramova.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Tatyana_Abramova.wav)|
+| **Ermil** (♂) | `ermil.gpu` |[Ermil.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Ermil.wav)|
+| **Zahar** (♂) | `zahar.gpu` |[Zahar.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Zahar.wav)|
+| **Kolya** (♀) | `kolya.gpu` |[Kolya.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Kolya.wav)|
+| **Kostya** (♀) | `kostya.gpu` |[Kostya.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Kostya.wav)|
+| **AntonSamokhvalov** (♀) | `anton_samokhvalov.gpu` |[Anton_Samokhvalov.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Anton_Samokhvalov.wav)|
 
 ### ⚠️ Возможные планы:
 - [ ] Пауза. _(Функция найдена)_
@@ -83,8 +83,8 @@ https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb
 - [x] **Исправить ошибки в README.md**...
 
 ## Демонстрационные страницы:
-1. **[Слушать](https://alkohole.github.io/udr/)** **(✅ Stable)**
-2. **[Скачать](https://alkohole.github.io/udr/down)** **(⚠️ Unstable and Abandoned)**
+1. **[Слушать](https://alkohole.github.io/machine-reading-text/)** **(✅ Stable)**
+2. **[Скачать](https://alkohole.github.io/machine-reading-text/down)** **(⚠️ Unstable and Abandoned)**
 
 <br>
 
@@ -98,7 +98,7 @@ https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb
 
 > [!NOTE]
 > <sup>_Edit 18.02.24_</sup> <br>
-> Функция **"Скачать"** - **НЕ стабильна**, да еще и **ЗАБРОШЕНА**, а вероятность сбоя выше альпийских гор. Если вам интересна данная функця - пожалуйста, взгляните на **[Скрипта](https://github.com/Alkohole/udr/blob/main/down.html#L81)**, и можете предложить мне вашу разгадку.
+> Функция **"Скачать"** - **НЕ стабильна**, да еще и **ЗАБРОШЕНА**, а вероятность сбоя выше альпийских гор. Если вам интересна данная функця - пожалуйста, взгляните на **[Скрипта](https://github.com/Alkohole/machine-reading-text/blob/main/down.html#L81)**, и можете предложить мне вашу разгадку.
 
 > [!NOTE]
 > <sup>_Update in v0.4.8(js)_</sup> <br>
