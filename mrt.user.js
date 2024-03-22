@@ -136,7 +136,7 @@
     iframe.style.borderRadius = "30px"; // Закругляем углы
     iframe.style.opacity = 0;
     iframe.style.transition = "opacity 0.5s ease";
-    iframe.src = "https://Alkohole.github.io/udr/index.html"
+    iframe.src = "https://Alkohole.github.io/machine-reading-text/index.html"
 
     // Добавляем событие для открытия/закрытия модального окна
     button.addEventListener("click", function() {
