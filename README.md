@@ -61,7 +61,7 @@ https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb
 ### Голоса:
 | TTS Name | Model | Examples |
 |----|----|----|
-| **Alice** (♀) _(дефолтный)_| `tatyana_shitova.gpu` |[Alice.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Alice.wav)|
+| **Alice** (♀) _(дефолтный)_| `tatyana_shitova.gpu` |[Tatyana_Shitova.ogg](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Tatyana_Shitova.ogg)|
 | **Oksana** (♀) | `oksana.gpu` |[Oksana.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Oksana.wav)|
 | **Jane** (♀) | `jane.gpu` |[Jane.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Jane.wav)|
 | **Omazh** (♀) | `omazh.gpu` |[Omazh.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Omazh.wav)|
