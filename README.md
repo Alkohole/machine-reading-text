@@ -72,7 +72,7 @@ https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb
 | **Zahar** (♂) | `zahar.gpu` |[Zahar.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Zahar.wav)|
 | **Kolya** (♂) | `kolya.gpu` |[Kolya.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Kolya.wav)|
 | **Kostya** (♂) | `kostya.gpu` |[Kostya.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Kostya.wav)|
-| **AntonSamokhvalov** (♂) | `anton_samokhvalov.gpu` |[Anton_Samokhvalov.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Anton_Samokhvalov.wav)|
+| **Anton Samokhvalov** (♂) | `anton_samokhvalov.gpu` |[Anton_Samokhvalov.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Anton_Samokhvalov.wav)|
 
 ### Эмоции:
 |  | Злой | Грустный | Нормальный | Счастливый |
@@ -148,6 +148,10 @@ https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb
 <br>
 
 # Окно сообщений:
+
+> [!NOTE]
+> <sup>_Add 24.03.24_</sup> <br>
+> Что происходит с **GitHub?!** Это просто _**пиз__Ц**_... Постоянно мой `README.md` саморедактируется и откатывается, чо это за _**на__Й**_**?!**
 
 > [!NOTE]
 > <sup>_Add 23.03.24_</sup> <br>
