@@ -38,7 +38,7 @@ textarea:focus {
     border: solid 2px;
     border-color: rgba(255, 140, 0, 0.2);
     margin-top: 10px;
-    width: 140px;
+    width: 100px;
     height: 40px;
     font-size: 22px;
     justify-content: center;
@@ -82,13 +82,13 @@ textarea:focus {
 .boxButton_tts{
     background-color: rgba(255, 140, 0, 0.2);
     font-size: 22px;
-    &::after{content: " ▶";}
+    &::after{content: "▶";}
 }
-.boxButton_tts.state-invalid{content: "";&:after{content:"";}&::before{content:"";}} /* Видимо этот класс поистине инвалид... */
+.boxButton_tts.state-invalid{content: "";&:after{content:"▶";}&::before{content:"";}} /* Видимо этот класс поистине инвалид... */
 .boxButton_tts.state-loading{
     border-top-right-radius: 30px;
     font-size: 22px;
-    &:after{content: " 三ᕕ( ᐛ )ᕗ";}
+    &:after{content: "ᕕ(ᐛ)ᕗ";}
 }
 .boxButton_tts.state-playing{
     width: 40px;
@@ -97,7 +97,7 @@ textarea:focus {
     -webkit-animation:pulse 1.8s infinite;
     animation:pulse 1.8s infinite;
     font-size: 22px;
-    &:after{content: " ■";}
+    &:after{content: "■";}
 }
 .selector-models{
     display: flex;
@@ -113,12 +113,60 @@ textarea:focus {
     width: 125px;
     height: 40px;
     font-size: 22px;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-bottom-right-radius: 23px;
     color: rgba(184, 104, 0, 0.6);
     cursor: pointer;
     transition: all 0.5s ease;
+    background-color: rgba(255, 140, 0, .2);
+    &:hover{
+        border-color: rgba(255, 140, 0, 0.6);
+        color: rgba(255, 140, 0, .8);
+    }
+    &::-ms-expand{display: none;}
+}
+.selector-speed{
+    display: flex;
+    float: right;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: solid 2px;
+    border-color: rgba(255, 140, 0, 0.2);
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-size: 22px;
+    color: rgba(184, 104, 0, 0.6);
+    cursor: pointer;
+    transition: all 0.5s ease;
+    background-color: rgba(255, 140, 0, .2);
+    &:hover{
+        border-color: rgba(255, 140, 0, 0.6);
+        color: rgba(255, 140, 0, .8);
+    }
+    &::-ms-expand{display: none;}
+}
+
+.selector-emotion{
+    display: flex;
+    float: right;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: solid 2px;
+    border-color: rgba(255, 140, 0, 0.2);
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-size: 22px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    color: rgba(184, 104, 0, 0.6);
+    cursor: pointer;
+    transition: all 0.5s ease;
+    background-color: rgba(255, 140, 0, .2);
     &:hover{
         border-color: rgba(255, 140, 0, 0.6);
         color: rgba(255, 140, 0, .8);
