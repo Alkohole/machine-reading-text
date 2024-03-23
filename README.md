@@ -1,12 +1,12 @@
 # [MRT] - Машинное чтение текста
 Расширение позволяет воспроизвести написанный текст синтезированным голосом, теперь доступен не только в Yandex Browser версии Windows. Признателен **[Yandex.Translate](https://translate.yandex.ru/)** за такую возможность.
-- Функция **"Слушать"** имеет лимит в 20k символов *(≈3000 слов* **/** *≈11 минут)* на запрос. **(✅ Cтабильна)**
+- Функция **"Слушать"** имеет лимит в 20k символов *(≈3000 слов* **/** *≈11 минут)* на запрос. **(✅ Стабильна)**
 - Функция **"Скачать"** имеет лимит в 1k символов *(≈140 слов* **/** *≈30 секунд)* на запрос. **(⚠️ НЕ стабильна + ЗАБРОШЕНА)**
 
 |  | From | To | Date |
 |---|---|---|---|
 | Расширение | ~~v0.4.7~~ | **v0.4.8**_(js)_ | 01.03.24 |
-| Страница окна | ~~v0.2.6~~ | **v0.3**_(web)_ | 10.03.24 |
+| Страница окна | ~~v0.3~~ | **v0.3.4**_(web)_ | 23.03.24 |
 
 <details>
 <summary>
@@ -56,12 +56,13 @@ https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb
 
 - Имеется обработчик дропа в окно ввода (Выделите текст и перетащите его в окно ввода, ранее находящийся в окне текст автоматически стирается).
 - Имеется счетчик количества символов в окне (Если превышение лимита - вы увидите сообщение).
-- Имеется выбор голосов озвучки: 6 женских и 5 мужских голоса. (**Oksana** таже самая **Alena**)
+- Имеется выбор голосов озвучки: 7 женских и 5 мужских голоса. (**Oksana** таже самая **Alena**)
 
 ### Голоса:
 | TTS Name | Model | Examples |
 |----|----|----|
-| **Oksana** (♀) _(дефолтный)_| `oksana.gpu` |[Oksana.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Oksana.wav)|
+| **Alice** (♀) _(дефолтный)_| `tatyana_shitova.gpu` |[Alice.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Alice.wav)|
+| **Oksana** (♀) | `oksana.gpu` |[Oksana.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Oksana.wav)|
 | **Jane** (♀) | `jane.gpu` |[Jane.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Jane.wav)|
 | **Omazh** (♀) | `omazh.gpu` |[Omazh.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Omazh.wav)|
 | **Nastya** (♀) | `nastya.gpu` |[Nastya.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Nastya.wav)|
@@ -73,12 +74,35 @@ https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb
 | **Kostya** (♀) | `kostya.gpu` |[Kostya.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Kostya.wav)|
 | **AntonSamokhvalov** (♀) | `anton_samokhvalov.gpu` |[Anton_Samokhvalov.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Anton_Samokhvalov.wav)|
 
+### Эмоции:
+|  | Злой | Грустный | Нормальный | Счастливый |
+|---|---|----|---|---|
+| **Alice** (♀) |❌|❌|✅|✅|
+| **Oksana** (♀) |❌|❌|✅|❌|
+| **Jane** (♀) |❌|*✅***|✅|❌|
+| **Omazh** (♀) |❌|❌|✅|❌|
+| **Nastya** (♀) |❌|*✅***|✅|❌|
+| **Sasha** (♀) |❌|❌|✅|❌|
+| **Tatyana Abramova** (♀) |❌|❌|❌|✅|
+| **Ermil** (♂) |❌|❌|✅|❌|
+| **Zahar** (♂) |❌|*✅***|✅|❌|
+| **Kolya** (♀) |❌|*✅***|✅|❌|
+| **Kostya** (♀) |❌|❌|✅|❌|
+| **AntonSamokhvalov** (♀) |❌|❌|✅|❌|
+
+**✅** - Поддерживается.<br>
+*✅*** - Возможно, есть небольшая разница в окончаниях.<br>
+**❌** - Нет поддержки.
+
 ### ⚠️ Возможные планы:
 - [ ] Пауза. _(Функция найдена)_
-- [ ] Скачивание. _(Функция найдена)_
+- [ ] Скачивание. _(Функция найдена, возможно будет в следующем обновлении)_
 - [ ] Визуализация блоков озвучки.
 - [ ] ~~Регулировка громкости.~~ _(Не возможно на уровне TTS)_
 - [ ] Переосмысление логики.
+- [x] Переход с **WAV** формат на **WEBM**/**OGG** форматы.
+- [x] Возможность менять скорость.
+- [x] Возможность менять эмоции.
 - [x] Выбор голоса озвучки.
 - [x] **Исправить ошибки в README.md**...
 
@@ -86,7 +110,16 @@ https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb
 1. **[Слушать](https://alkohole.github.io/machine-reading-text/)** **(✅ Stable)**
 2. **[Скачать](https://alkohole.github.io/machine-reading-text/down)** **(⚠️ Unstable and Abandoned)**
 
+
+
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 
 # Окно объявлений:
 
@@ -104,15 +137,21 @@ https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb
 > <sup>_Update in v0.4.8(js)_</sup> <br>
 > Добавлена проверка на наличие дубликатов расширения на сайте. _(Были проблемы с `<iframe>`, от чего элементы расширения дублировались.)_
 
-
 > [!NOTE]
-> <sup>_Update in v0.3(web)_</sup> <br>
+> <sup>_Update in v0.3.4(web)_</sup> <br>
 > Лишнии функции удалены.<br>
-> Фикс поля ввода для браузеров построенных на **Chromium** _(Google Chrome, Yandex Browser)_.
+> Добавлен голос Алисы.<br>
+> Добавленна возможность смены эмоцый.<br>
+> Добавлена возможность менять скорость речи.<br>
+> Сменился формат с **WAV** на **WEBM**/**OGG** форматы. Для экономии трафика интернета и RAM.<br>
 
 <br>
 
 # Окно сообщений:
+
+> [!NOTE]
+> <sup>_Add 23.03.24_</sup> <br>
+> В скором времени буду работать над функцией скачивания.
 
 > [!NOTE]
 > <sup>_Add 10.03.24_</sup> <br>
@@ -133,12 +172,3 @@ https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb
 > Забавно, но это расширение работает на телефоне Android.
 
 
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
