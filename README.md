@@ -70,9 +70,9 @@ https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb
 | **Tatyana Abramova** (♀) | `tatyana_abramova.gpu` |[Tatyana_Abramova.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Tatyana_Abramova.wav)|
 | **Ermil** (♂) | `ermil.gpu` |[Ermil.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Ermil.wav)|
 | **Zahar** (♂) | `zahar.gpu` |[Zahar.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Zahar.wav)|
-| **Kolya** (♀) | `kolya.gpu` |[Kolya.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Kolya.wav)|
-| **Kostya** (♀) | `kostya.gpu` |[Kostya.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Kostya.wav)|
-| **AntonSamokhvalov** (♀) | `anton_samokhvalov.gpu` |[Anton_Samokhvalov.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Anton_Samokhvalov.wav)|
+| **Kolya** (♂) | `kolya.gpu` |[Kolya.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Kolya.wav)|
+| **Kostya** (♂) | `kostya.gpu` |[Kostya.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Kostya.wav)|
+| **AntonSamokhvalov** (♂) | `anton_samokhvalov.gpu` |[Anton_Samokhvalov.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Anton_Samokhvalov.wav)|
 
 ### Эмоции:
 |  | Злой | Грустный | Нормальный | Счастливый |
@@ -86,9 +86,9 @@ https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb
 | **Tatyana Abramova** (♀) |❌|❌|❌|✅|
 | **Ermil** (♂) |❌|❌|✅|❌|
 | **Zahar** (♂) |❌|*✅***|✅|❌|
-| **Kolya** (♀) |❌|*✅***|✅|❌|
-| **Kostya** (♀) |❌|❌|✅|❌|
-| **AntonSamokhvalov** (♀) |❌|❌|✅|❌|
+| **Kolya** (♂) |❌|*✅***|✅|❌|
+| **Kostya** (♂) |❌|❌|✅|❌|
+| **AntonSamokhvalov** (♂) |❌|❌|✅|❌|
 
 **✅** - Поддерживается.<br>
 *✅*** - Возможно, есть небольшая разница в окончаниях.<br>
