@@ -38,7 +38,7 @@ textarea:focus {
     border: solid 2px;
     border-color: rgba(255, 140, 0, 0.2);
     margin-top: 10px;
-    width: 100px;
+    width: 50px;
     height: 40px;
     font-size: 22px;
     justify-content: center;
@@ -88,7 +88,7 @@ textarea:focus {
 .boxButton_tts.state-loading{
     border-top-right-radius: 30px;
     font-size: 22px;
-    &:after{content: "ᕕ(ᐛ)ᕗ";}
+    &:after{content: "(ᐛ)";}
 }
 .boxButton_tts.state-playing{
     width: 40px;
@@ -110,7 +110,7 @@ textarea:focus {
     margin-top: 10px;
     justify-content: center;
     align-items: center;
-    width: 125px;
+    width: 85px;
     height: 40px;
     font-size: 22px;
     border-bottom-right-radius: 23px;
