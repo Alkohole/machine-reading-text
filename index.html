@@ -11,9 +11,10 @@
                 <textarea id="textarea"></textarea>
             </div>
             <div class="box-panel box-panel_bottom" data-box-panel="">
-                <button id="textSpeaker" class="boxButton boxButton_tts button button_view_clear button_size_l button_icn button_round state-disabled"> ▶</button>
+                <button id="textSpeaker" class="boxButton boxButton_tts button button_view_clear button_size_l button_icn button_round state-disabled"></button>
                 <select class="selector-models" id="ttsModel">
-                    <option value="oksana.gpu" selected>Oksana (♀)</option>
+                    <option value="tatyana_shitova.gpu" selected>Alice (♀)</option>
+                    <option value="oksana.gpu">Oksana (♀)</option>
                     <option value="jane.gpu">Jane (♀)</option>
                     <option value="omazh.gpu">Omazh (♀)</option>
                     <option value="nastya.gpu">Nastya (♀)</option>
@@ -24,6 +25,21 @@
                     <option value="kolya.gpu">Kolya (♂)</option>
                     <option value="kostya.gpu">Kostya (♂)</option>
                     <option value="anton_samokhvalov.gpu">Anton Samokhvalov (♂)</option>
+
+                </select>
+                <select class="selector-speed" id="ttsSpeed">
+                    <option value="0.8">0.8</option>
+                    <option value="0.9">0.9</option>
+                    <option value="1" selected>1.0</option>
+                    <option value="1.1">1.1</option>
+                    <option value="1.2">1.2</option>
+
+                </select>
+                <select class="selector-emotion" id="ttsEmotion">
+                    <option value="angry">😈</option>
+                    <option value="sed">😔</option>
+                    <option value="neutral" selected>😐</option>
+                    <option value="happy">☺️</option>
 
                 </select>
             </div>
