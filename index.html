@@ -1,52 +1,90 @@
 <!DOCTYPE html>
 <html lang="ru" id="app" class="app application state-unresolved state-db_inactive  state-translatorExpanded  ">
 <head>
+    <link rel="shortcut icon" href="favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body data-text="" data-lang="" data-source-lang="ru" data-target-lang="en">
+
         <main class="page-content">
-            <div id="textbox" class="box box_src state-empty">
-                <textarea id="textarea"></textarea>
-            </div>
-            <div class="box-panel box-panel_bottom" data-box-panel="">
-                <button id="textSpeaker" class="boxButton boxButton_tts button button_view_clear button_size_l button_icn button_round state-disabled"></button>
-                <select class="selector-models" id="ttsModel">
-                    <option value="tatyana_shitova.gpu" selected>Alice (♀)</option>
-                    <option value="oksana.gpu">Oksana (♀)</option>
-                    <option value="jane.gpu">Jane (♀)</option>
-                    <option value="omazh.gpu">Omazh (♀)</option>
-                    <option value="nastya.gpu">Nastya (♀)</option>
-                    <option value="sasha.gpu">Sasha (♀)</option>
-                    <option value="tatyana_abramova.gpu">Tatyana Abramova (♀)</option>
-                    <option value="ermil.gpu">Ermil (♂)</option>
-                    <option value="zahar.gpu">Zahar (♂)</option>
-                    <option value="kolya.gpu">Kolya (♂)</option>
-                    <option value="kostya.gpu">Kostya (♂)</option>
-                    <option value="anton_samokhvalov.gpu">Anton Samokhvalov (♂)</option>
 
-                </select>
-                <select class="selector-speed" id="ttsSpeed">
-                    <option value="0.8">0.8</option>
-                    <option value="0.9">0.9</option>
-                    <option value="1" selected>1.0</option>
-                    <option value="1.1">1.1</option>
-                    <option value="1.2">1.2</option>
+                <div id="textbox" class="box box_src state-empty">
+                    <textarea id="textarea"></textarea>
+                </div>
+                <div class="box-panel box-panel_bottom" data-box-panel="">
+                    <div class="warning"></div>
+                    <button id="textSpeaker" class="boxButton boxButton_tts button button_view_clear button_size_l button_icn button_round state-disabled"></button>
 
-                </select>
-                <select class="selector-emotion" id="ttsEmotion">
-                    <option value="angry">😈</option>
-                    <option value="sed">😔</option>
-                    <option value="neutral" selected>😐</option>
-                    <option value="happy">☺️</option>
+                    <div class="back"></div>
+                    <select title="Speed" class="selector-speed" id="ttsSpeed">
+                        <option value="0.5">0.5</option>
+                        <option value="0.6">0.6</option>
+                        <option value="0.7">0.7</option>
+                        <hr>
+                        <option value="0.8">0.8</option>
+                        <option value="0.9">0.9</option>
+                        <option value="1" selected>1.0</option>
+                        <option value="1.1">1.1</option>
+                        <option value="1.2">1.2</option>
+                        <hr>
+                        <option value="1.5">1.5</option>
+                        <option value="1.8">1.8</option>
+                        <option value="2">2</option>
+                        <option value="2.5">2.5</option>
+                        <option value="3">3</option>
 
-                </select>
-            </div>
+                    </select>
+                    <select title="Role" class="selector-emotion" id="ttsEmotion">
+                        <option value="evil">😈</option>
+                        <option value="neutral" selected>😐</option>
+                        <option value="good">☺️</option>
+                        <option value="happy">🥳</option>
+
+                    </select>
+
+                    <select title="Models" class="selector-models" id="ttsModel">
+                        <option value="tatyana_shitova" lang="ru-RU" gpu="true" data-emotions="neutral,happy" selected>Alice (♀)</option>
+                        <option value="oksana" lang="ru-RU" gpu="true" data-emotions="evil,neutral,good">Oksana (♀)</option>
+                        <option value="jane" lang="ru-RU" gpu="true" data-emotions="evil,neutral,good">Jane (♀)</option>
+                        <option value="omazh" lang="ru-RU" gpu="true" data-emotions="evil,neutral">Omazh (♀)</option>
+                        <option value="nastya" lang="ru-RU" gpu="true" data-emotions="evil,neutral,good">Nastya (♀)</option>
+                        <option value="sasha" lang="ru-RU" gpu="true" data-emotions="evil,neutral,good">Sasha (♀)</option>
+                        <option value="tatyana_abramova" lang="ru-RU" gpu="true" data-emotions="good">Tatyana Abramova (♀)</option>
+                        <option value="ermil" lang="ru-RU" gpu="true" data-emotions="evil,neutral,good">Ermil (♂)</option>
+                        <option value="zahar" lang="ru-RU" gpu="true" data-emotions="evil,neutral,good">Zahar (♂)</option>
+                        <option value="kolya" lang="ru-RU" gpu="true" data-emotions="evil,neutral,good">Kolya (♂)</option>
+                        <option value="kostya" lang="ru-RU" gpu="true" data-emotions="evil,neutral,good">Kostya (♂)</option>
+                        <option value="anton_samokhvalov" lang="ru-RU" gpu="true" data-emotions="neutral">Anton Samokhvalov (♂)</option>
+                        <hr>
+                        <option value="selay" lang="tr-TR" gpu="true" data-emotions="neutral">Selay [Tr] (♀)</option>
+                        <option value="silaerkan" lang="tr-TR" gpu="false" data-emotions="neutral">Silaerkan [Tr] (♀)</option>
+                        <option value="erkanyavas" lang="tr-TR" gpu="false" data-emotions="evil,neutral,good">Erkanyavas [Tr] (♂)</option>
+                        <hr>
+                        <option value="oksana" lang="uk-UA" gpu="false" data-emotions="evil,neutral,good">Oksana [Ua] (♀)</option>
+                        <hr>
+                        <option value="oksana" lang="en-US" gpu="true" data-emotions="evil,neutral,good">Oksana [En] (♀)</option>
+                        <option value="jane" lang="en-US" gpu="true" data-emotions="evil,neutral,good">Jane [En] (♀)</option>
+                        <option value="omazh" lang="en-US" gpu="true" data-emotions="evil,neutral">Omazh [En] (♀)</option>
+                        <option value="nastya" lang="en-US" gpu="false" data-emotions="evil,neutral">Nastya [En] (♀)</option>
+                        <option value="sasha" lang="en-US" gpu="false" data-emotions="evil,neutral,good">Sasha [En] (♀)</option>
+                        <option value="ermil" lang="en-US" gpu="false" data-emotions="evil,neutral,good">Ermil [En] (♂)</option>
+                        <option value="zahar" lang="en-US" gpu="false" data-emotions="evil,neutral,good">Zahar [En] (♂)</option>
+                        <option value="kolya" lang="en-US" gpu="false" data-emotions="evil,neutral,good">Kolya [En] (♂)</option>
+                        <option value="kostya" lang="en-US" gpu="false" data-emotions="evil,neutral,good">Kostya [En] (♂)</option>
+                        <option value="erkanyavas" lang="en-US" gpu="false" data-emotions="evil,neutral,good">Erkanyavas [En] (♂)</option>
+                        <option value="silaerkan" lang="en-US" gpu="false" data-emotions="neutral">Silaerkan [En] (♀)</option>
+
+                    </select>
+                    
+                </div>
+                
+
             <script src="js/drop.js"></script>
         </main>
         <script nonce="V8ltFVqXX5" src="js/ttsset.js"></script>
-        <script src="https://bitbucket.org/qweweio/zeroone/raw/e77bbd5bf20e5545e4ae044b989d2c2635065a4e/text.modern.min.js" crossorigin="anonymous"></script>
+        <script src="https://bitbucket.org/qweweio/zeroone/raw/84537ec26360145b68c8d023c0e168ecef2cee37/text.modern.min.js" crossorigin="anonymous"></script>
         <script src="https://yastatic.net/s3/translate/v77.2/dist/scripts/bundles/webspeechkit.js" crossorigin="anonymous"></script>
         <div id="textApp"></div>
         <script nonce="V8ltFVqXX5">

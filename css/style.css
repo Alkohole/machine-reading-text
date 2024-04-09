@@ -1,175 +1,307 @@
+:root {
+    --background: rgb(245, 236, 228);
+
+    --background-button: rgb(90, 81, 101);
+    --background-button_hover: rgb(124, 112, 139);
+
+    --color-button-play: rgb(151, 151, 151);
+    --color-button-play-hover: rgb(203, 141, 229);
+    --color-button-play-warn: rgb(255, 99, 99);
+
+    --selector-color: rgb(151, 151, 151);
+    --selector-color-hover: rgb(181, 181, 181);
+    --selector-border-color: rgba(147, 147, 147, 0.333);
+    --selector-border-color-hover: rgb(147, 147, 147);
+
+    --back-b: rgb(71, 64, 79);
+    --panel-background: rgba(255, 208, 0, 0);
+    --border: rgba(121, 0, 123, 0.9);
+    --border-hover: rgba(121, 0, 123, 0.5);
+    --color: rgb(66, 66, 66);
+    --b-color: rgba(208, 208, 208, 0.9);
+    --b-color-hover: rgb(118, 118, 118);
+    --scrollbar-color: rgba(121, 0, 123, 0.9) rgba(0, 0, 0, 0);
+    --pulse-shadow-1: rgba(255, 255, 255, 0.1);
+    --pulse-shadow-2: rgba(255, 255, 255, 0.6);
+    --b-play: rgba(121, 0, 123, 0.9);
+    --b-play-back: rgb(255, 246, 255);
+    --pulse-b-play-0: rgb(203, 141, 229);
+    --pulse-b-play-80: rgba(203, 141, 229, 0.5);
+    --pulse-b-play-100: rgba(203, 141, 229, 0.75);
+    --pop-color: rgba(202, 202, 202);
+}
+
+.dev_mod{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    background-color: brown;
+    z-index: 9999;
+}
+
 body{
-    position: relative;
-    margin: 12px;
+    margin: 0;
     padding: 0;
     background-color: rgba(0, 0, 0, 0);
     font-size: 22px;
+
 }
 button{
     font-size: 22px;
 }
+.page-content{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
 textarea{
     position: relative;
     margin: 0px;
-    width: calc(100% - 33px);
-    height: 200px;
+    width: calc(100% - 32px);
+    height: calc(100vh - 119px);
     resize: none;
     font-size: 9px;
-    padding: 15px;
-    background-color: rgba(255, 140, 0, .2);
-    border-top-left-radius: 30px;
-    border: solid 2px;
-    border-color: rgba(255, 140, 0, 0.2);
-    color: rgba(0, 0, 0, 0.5);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 50px;
+    background-color: var(--background);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: solid 1px;
+    border-color: var(--b-color);
+    border-bottom: 0;
+    color: var(--color);
     transition: all 0.5s ease;
-    scrollbar-color: rgba(255, 140, 0, 0.9) rgba(0, 0, 0, 0);
+    scrollbar-color: var(--scrollbar-color);
+    z-index: 1;
+    &:hover {
+        outline: none;
+    }
+    &:focus {
+        outline: none;
+    }
 }
-textarea:focus {
-    outline: none;
-    border-color: rgba(255, 140, 0, 0.6);
-    color: rgba(0, 0, 0, 1);
+.box-panel{
+    display: block;
+    position: relative;
+    z-index: 3;
+}
+.back{
+    display: block;
+    position: absolute;
+    height: 64px;
+    width: calc(100% - 2px);
+    z-index: 2;
+    margin-top: -10px;
+    /* border-top-left-radius: 15px;
+    border-top-right-radius: 15px; */
+    border: solid 1px;
+    background-color: var(--back-b);
+    border-color: var(--b-color);
+    border-top: 0;
+    border-bottom: 0;
 }
 .boxButton{
-    display: flex;
-    float: left;
-    padding-left: 8px;
-    padding-right: 7px;
-    padding-bottom: 10px;
-    border: solid 2px;
-    border-color: rgba(255, 140, 0, 0.2);
-    margin-top: 10px;
-    width: 50px;
-    height: 40px;
-    font-size: 22px;
+    z-index: 4;
+    display: block;
+    position: absolute;
+    padding-bottom: 4px;
+    padding-right: 2px;
+    border: solid 4px;
+    margin-left: 10px;
+    margin-top: -32px;
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
     justify-content: center;
     align-items: center;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    color: rgba(184, 104, 0, 0.6);
+    border-radius: 35px;
+    color: var(--color-button-play);
     cursor: pointer;
     transition: all 0.5s ease;
+    background-color: var(--background-button);
+    border-color: var(--back-b);
     &:hover{
-        border-color: rgba(255, 140, 0, 0.6);
-        color: rgba(255, 140, 0, .8);
+        color: var(--color-button-play-hover);
+        background-color: var(--background-button_hover);
     }
+}
+.warning{
+    display: none;
+    position: absolute;
+    width: 130px;
+    height: 40px;
+    font-size: 22px;
+    bottom: 0px;
+    left: calc(50% - 65px);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: var(--back-b);
+    color: var(--selector-color);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-align-last: center;
+    text-indent: 0;
 }
 @-webkit-keyframes pulse{
     0%{
-        box-shadow:0 0 0 0 rgba(255, 140, 0,.1);
-        box-shadow:0 0 0 0 rgba(255, 140, 0, 0.9);
-        color: rgba(255, 140, 0, .9);
+        box-shadow:0 0 0 0 var(--pulse-shadow-1);
+        box-shadow:0 0 0 0 var(--pulse-shadow-2);
+        color: var(--pulse-b-play-0);
     }
-    80%{color: rgba(184, 104, 0, 0.1);
-        box-shadow:0 0 0 8px transparent
+    80%{color: var(--pulse-b-play-80);
+        box-shadow:0 0 0 14px transparent
     }to{
         box-shadow:0 0 0 0 transparent
     }
-    100%{color: rgba(255, 140, 0, .5);}
+    100%{color: var(--pulse-b-play-100);}
 }
 @keyframes pulse{
     0%{
-        box-shadow:0 0 0 0 rgba(255, 140, 0,.1);
-        box-shadow:0 0 0 0 rgba(255, 140, 0, 0.9);
-        color: rgba(255, 140, 0, .9);
+        box-shadow:0 0 0 0 var(--pulse-shadow-1);
+        box-shadow:0 0 0 0 var(--pulse-shadow-2);
+        color: var(--pulse-b-play-0);
     }
-    80%{color: rgba(184, 104, 0, 0.1);
-        box-shadow:0 0 0 8px transparent
+    80%{color: var(--pulse-b-play-80);
+        box-shadow:0 0 0 14px transparent
     }to{
         box-shadow:0 0 0 0 transparent
     }
-    100%{color: rgba(255, 140, 0, .5);}
+    100%{color: var(--pulse-b-play-100);}
 }
 .boxButton_tts{
-    background-color: rgba(255, 140, 0, 0.2);
-    font-size: 22px;
     &::after{content: "▶";}
 }
-.boxButton_tts.state-invalid{content: "";&:after{content:"▶";}&::before{content:"";}} /* Видимо этот класс поистине инвалид... */
+.boxButton_tts.state-invalid{content: "";&:after{content:"▶";}&::before{content:"";}}
 .boxButton_tts.state-loading{
-    border-top-right-radius: 30px;
-    font-size: 22px;
-    &:after{content: "(ᐛ)";}
+    &:after{content: "...";}
 }
 .boxButton_tts.state-playing{
-    width: 40px;
-    border-top-right-radius: 30px;
     box-shadow:0 0 0 transparent;
     -webkit-animation:pulse 1.8s infinite;
     animation:pulse 1.8s infinite;
-    font-size: 22px;
+    padding-left: 1px;
     &:after{content: "■";}
 }
-.selector-models{
-    display: flex;
+.selector-models,
+.selector-speed,
+.selector-emotion{
+    display: block;
+    position: relative;
     float: right;
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-    border: solid 2px;
-    border-color: rgba(255, 140, 0, 0.2);
-    margin-top: 10px;
+    border: solid 1px;
+    border-color:  var(--selector-border-color);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
     justify-content: center;
     align-items: center;
-    width: 85px;
-    height: 40px;
     font-size: 22px;
-    border-bottom-right-radius: 23px;
-    color: rgba(184, 104, 0, 0.6);
+    color: var(--selector-color);
     cursor: pointer;
     transition: all 0.5s ease;
-    background-color: rgba(255, 140, 0, .2);
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 9;
     &:hover{
-        border-color: rgba(255, 140, 0, 0.6);
-        color: rgba(255, 140, 0, .8);
+        color: var(--selector-color-hover);
+        border-color: var(--selector-border-color-hover);
     }
     &::-ms-expand{display: none;}
+}
+.selector-models{
+    margin-right: 15px;
+    width: 140px;
+    height: 40px;
 }
 .selector-speed{
-    display: flex;
-    float: right;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    border: solid 2px;
-    border-color: rgba(255, 140, 0, 0.2);
-    margin-top: 10px;
-    justify-content: center;
-    align-items: center;
+    margin-right: 15px;
+    width: 43px;
     height: 40px;
-    font-size: 22px;
-    color: rgba(184, 104, 0, 0.6);
-    cursor: pointer;
-    transition: all 0.5s ease;
-    background-color: rgba(255, 140, 0, .2);
-    &:hover{
-        border-color: rgba(255, 140, 0, 0.6);
-        color: rgba(255, 140, 0, .8);
-    }
-    &::-ms-expand{display: none;}
+}
+.selector-emotion{
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+}
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-align: center;
+    text-align-last: center;
+    text-indent: 0;
 }
 
-.selector-emotion{
-    display: flex;
-    float: right;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    border: solid 2px;
-    border-color: rgba(255, 140, 0, 0.2);
-    margin-top: 10px;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    font-size: 22px;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    color: rgba(184, 104, 0, 0.6);
-    cursor: pointer;
-    transition: all 0.5s ease;
-    background-color: rgba(255, 140, 0, .2);
-    &:hover{
-        border-color: rgba(255, 140, 0, 0.6);
-        color: rgba(255, 140, 0, .8);
+
+
+
+@media only screen and (min-width: 720px) {
+    body{
+        background-color: rgba(116, 102, 91, 0.1);
     }
-    &::-ms-expand{display: none;}
+    textarea{
+        font-size: 14px;
+    }
+    .page-content{
+        margin: 0 auto;
+        width: 720px;
+        
+    }
+    .boxButton{
+        margin-left: 30px;
+    }
+    .selector-models{
+        width: 240px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+}
+@media only screen and (max-width: 400px) {
+    .selector-models{
+        margin-right: 5px;
+        width: 120px;
+    }
+    .selector-emotion{
+        margin-right: 5px;
+    }
+    .selector-speed{
+        margin-right: 5px;
+    }
+    .boxButton{
+        margin-left: 8px;
+    }
+
+
+
+}
+@media only screen and (max-height: 150px) {
+    textarea{
+        opacity: 0;
+    }
+    .back{
+        border-top: var(--b-color) solid 1px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    .warning{
+        opacity: 0;
+    }
 }
