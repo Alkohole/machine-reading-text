@@ -2,7 +2,7 @@
 // @name         [MRT] - Machine reading text
 // @name:ru      [MRT] - Машинное чтение текста
 // @namespace    http://tampermonkey.net/
-// @version      0.4.8
+// @version      0.5
 // @description  Display custom HTML page from URL on button click with settings panel
 // @author       Alkohole
 // @match        *://*/*
