@@ -315,15 +315,15 @@ select {
         z-index: -1;
         border: dashed 2px var(--selector-border-color);
         border-radius: 10px;
-        color: rgb(233, 233, 233);
+        color: rgba(233, 233, 233, 0.7);
         text-align: center;
         text-align-last: center;
         justify-content: center;
         align-items: center;
         font-size: 22px;
         /* text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5); */
-        -webkit-text-stroke: 1px rgb(132, 132, 132);
-        text-stroke: 1px rgb(132, 132, 132);
+        -webkit-text-stroke: 1px rgba(132, 132, 132, 0.7);
+        text-stroke: 1px rgba(132, 132, 132, 0.7);
         background-color: rgba(0, 0, 0, 0);
     }
 }
