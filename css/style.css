@@ -30,7 +30,9 @@
     --pulse-b-play-100: rgba(203, 141, 229, 0.75);
     --pop-color: rgba(202, 202, 202);
 }
-
+.dropev{
+       display: none; 
+}
 .dev_mod{
     display: flex;
     position: absolute;
