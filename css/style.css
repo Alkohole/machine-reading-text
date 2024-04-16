@@ -194,7 +194,7 @@ textarea{
     color: var(--color-button-play-hover);
     border: 2px dashed var(--color-button-play-hover);
     animation: spin 2s linear infinite;
-    &:after{font-size: 42px;content: "❍";}
+    &:after{line-height: 0;font-size: 42px;content: "❍";}
 }
 .state-playing{
     box-shadow:0 0 0 transparent;
