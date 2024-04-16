@@ -21,9 +21,13 @@
 
 </details>
 
-## Демо видео:
+## Демо:
 
 https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb5a7c
+
+| Интерфейс веба | Интерфейс плагина | Интерфейс плагина  (свернутый)  |
+|---|---|---|
+| ![](https://github.com/Alkohole/machine-reading-text/raw/main/examples/full.png) | ![](https://github.com/Alkohole/machine-reading-text/raw/main/examples/normal.png) | ![](https://github.com/Alkohole/machine-reading-text/raw/main/examples/small.png) |
 
 ## Установка расширения:
 
