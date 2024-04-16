@@ -29,21 +29,13 @@
     --pulse-b-play-80: rgba(203, 141, 229, 0.5);
     --pulse-b-play-100: rgba(203, 141, 229, 0.75);
     --pop-color: rgba(202, 202, 202);
+
+    --svg-play: url('data:image/svg+xml,<svg fill="%23cb8de5" height="28px" width="28px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve"><path id="XMLID_308_" d="M37.728,328.12c2.266,1.256,4.77,1.88,7.272,1.88c2.763,0,5.522-0.763,7.95-2.28l240-149.999c4.386-2.741,7.05-7.548,7.05-12.72c0-5.172-2.664-9.979-7.05-12.72L52.95,2.28c-4.625-2.891-10.453-3.043-15.222-0.4C32.959,4.524,30,9.547,30,15v300C30,320.453,32.959,325.476,37.728,328.12z"/></svg>');
+    --svg-stop: url('data:image/svg+xml,<svg fill="%23cb8de5" width="28px" height="28px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M5.92 24.096q0 0.832 0.576 1.408t1.44 0.608h16.128q0.832 0 1.44-0.608t0.576-1.408v-16.16q0-0.832-0.576-1.44t-1.44-0.576h-16.128q-0.832 0-1.44 0.576t-0.576 1.44v16.16z"></path></svg>');
 }
 .dropev{
        display: none; 
 }
-.dev_mod{
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: auto;
-    height: auto;
-    background-color: brown;
-    z-index: 9999;
-}
-
 body{
     margin: 0;
     padding: 0;
@@ -111,8 +103,8 @@ textarea{
     z-index: 4;
     display: block;
     position: absolute;
-    padding-bottom: 4px;
-    padding-right: 2px;
+    padding-bottom: 0px;
+    padding-right: 0px;
     border: solid 4px;
     margin-left: 10px;
     margin-top: -32px;
@@ -176,19 +168,40 @@ textarea{
     }
     100%{color: var(--pulse-b-play-100);}
 }
+@-webkit-keyframes spin{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 .boxButton_tts{
-    &::after{content: "▶";}
+    &:after{content: var(--svg-play);}
 }
-.boxButton_tts.state-invalid{content: "";&:after{content:"▶";}&::before{content:"";}}
-.boxButton_tts.state-loading{
-    &:after{content: "...";}
+.state-invalid{
+    &:after{content: var(--svg-play);}
 }
-.boxButton_tts.state-playing{
+.state-loading{
+    color: var(--color-button-play-hover);
+    border: 2px dashed var(--color-button-play-hover);
+    animation: spin 2s linear infinite;
+    &:after{font-size: 42px;content: "❍";}
+}
+.state-playing{
     box-shadow:0 0 0 transparent;
     -webkit-animation:pulse 1.8s infinite;
     animation:pulse 1.8s infinite;
-    padding-left: 1px;
-    &:after{content: "■";}
+    
+    &:after{content: var(--svg-stop);margin-right: 5px;}
 }
 .selector-models,
 .selector-speed,
@@ -264,17 +277,6 @@ select {
         width: 240px;
     }
 
-
-
-
-
-
-
-
-
-
-
-
 }
 @media only screen and (max-width: 400px) {
     .selector-models{
@@ -291,12 +293,11 @@ select {
         margin-left: 8px;
     }
 
-
-
 }
 @media only screen and (max-height: 150px) {
     textarea{
         opacity: 0;
+        height: calc(100vh - 95px);
     }
     .back{
         border-top: var(--b-color) solid 1px;
@@ -306,12 +307,12 @@ select {
     .warning{
         opacity: 0;
     }
-        .dropev{
+    .dropev{
         margin: 5px;
         position: absolute;
         display: flex;
         width: calc(100% - 14px);
-        height: calc(100% - 80px);
+        height: calc(100% - 50px);
         z-index: -1;
         border: dashed 2px var(--selector-border-color);
         border-radius: 10px;
@@ -323,7 +324,20 @@ select {
         font-size: 22px;
         /* text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5); */
         -webkit-text-stroke: 1px rgba(132, 132, 132, 0.7);
-        text-stroke: 1px rgba(132, 132, 132, 0.7);
         background-color: rgba(0, 0, 0, 0);
+    }
+    .back{
+        height: 38px;
+    }
+    .selector-speed,
+    .selector-emotion,
+    .selector-models{
+        margin-top: -6px;
+        height: 30px;
+    }
+    .boxButton{
+        width: 60px;
+        height: 60px;
+        margin-top: -32px;
     }
 }

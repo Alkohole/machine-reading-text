@@ -2,7 +2,7 @@
 // @name         [MRT] - Machine reading text
 // @name:ru      [MRT] - Машинное чтение текста
 // @namespace    http://tampermonkey.net/
-// @version      0.5
+// @version      0.5.1
 // @description  Display custom HTML page from URL on button click with settings panel
 // @author       Alkohole
 // @match        *://*/*
@@ -73,8 +73,8 @@
             button.style.right = "5px";
         } else {
             toggleButton.style.display = "block";
-            toggleButton.style.bottom = "70px";
-            button.style.bottom = "60px";
+            toggleButton.style.bottom = "110px";
+            button.style.bottom = "95px";
             button.style.right = "5px";
         }
     }
