@@ -78,7 +78,7 @@ _В качестве примера для голоса служит глава 
 | **Kolya** (♂) | `kolya.gpu` |[Kolya.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Kolya.wav)|
 | **Kostya** (♂) | `kostya.gpu` |[Kostya.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Kostya.wav)|
 | **Anton Samokhvalov** (♂) | `anton_samokhvalov.gpu` |[Anton_Samokhvalov.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Anton_Samokhvalov.wav)|
-| **Oksana** <sup>`Ua`</sup> (♀) | `oksana` | [Oksana_nogpu_ua.ogg](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Oksana_nogpu_ua.ogg) |
+| **Oksana** <sup>`Uk`</sup> (♀) | `oksana` | [Oksana_nogpu_ua.ogg](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Oksana_nogpu_ua.ogg) |
 | **Selay** <sup>`Tr`</sup> (♀) | `selay.gpu` | [Selay.ogg](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Selay.ogg) |
 | **Erkanyavas** <sup>`En`</sup> (♂) | `erkanyavas` | [Erkanyavas.ogg](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Erkanyavas.ogg) |
 
@@ -113,7 +113,7 @@ _В качестве примера для голоса служит глава 
 - [ ] Кэштрование параметров селектора. _(память)_
 - [ ] Настройки, позиционирование окна расширения и плавающее окно.
 - [x] Возможности переключатся между **`CPU`** и **`GPU`**. _(На данный момент частично)_
-- [x] Возможности смены языка. _(На данный момент частично)_
+- [x] Возможности смены языка. _(`Ru`, `Tr`, `Uk`, `En`)_
 - [x] Переход с **`WAV`** формат на **`WEBM`**/**`OGG`** форматы.
 - [x] Возможность менять скорость.
 - [x] Возможность менять эмоции.
@@ -153,12 +153,15 @@ _В качестве примера для голоса служит глава 
 > Удалена возможность переключения между **Слущать** и **Скачать**. <br>
 > Функция **"Скачать"** была удалена. <br>
 > Удалены настройки. <br>
-> Интерфейс переработан.
+> Интерфейс переработан. <br>
+> <br>
+> <sup>_Update in v0.5.1(js)_</sup> <br>
+> Маленький фикс.
 
 > [!NOTE]
 > <sup>_Update in v0.4(web)_</sup> <br>
 > Добавлен голоса: **Selay**, **Erkanyavas**, **Silaerkan**. <br>
-> Добавлены языки: `Tr`, `Ua`, `En` <br>
+> Добавлены языки: `Tr`, `Uk`, `En` <br>
 > Добавлена дополнительные скорости речи. <br>
 > Добавлена возможность выставлять ударения используя `+` перед ударной буквой, и пауза `-` <br>
 > Интерфейс переработан.
