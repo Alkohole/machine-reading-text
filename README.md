@@ -174,7 +174,7 @@ _В качестве примера для голоса служит глава 
 > [!NOTE]
 > <sup>_Add 18.04.24_</sup> <br>
 > Когда на утро фикс превращается в крысу: <br>
-> ![](https://i.ytimg.com/vi/vbf5bubKPks/hqdefault.jpg)
+> ![](https://desu.shikimori.one/system/user_images/original/785574/1892228.jpg)
 
 > [!NOTE]
 > <sup>_Add 09.04.24_</sup> <br>
