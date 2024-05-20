@@ -130,7 +130,7 @@ Object.assign(window.config, {
         CSRF_TOKEN: 'f7c312b3d9c72061dde079dae508928a9a72bbcb:65787abb',
         IS_FIRST_VISIT: false,
         TTS_URL: 'https://tts.api.cloud.yandex.net/speech/v1/tts',
-        UNIPROXY_URL: 'wss://beta.uniproxy.alice.yandex.net/uni.ws',
+        UNIPROXY_URL: 'wss://uniproxy.alice.yandex.net/uni.ws',
         TTS_RATE: 1,
         TTS_LANGS: {
             ru: 'ru_RU',
