@@ -85,7 +85,7 @@
     settingsButton.style.cursor = "pointer";
     settingsButton.style.transition = "height 0.5s ease, opacity 0.5s ease";
     settingsButton.addEventListener("click", function() {
-        var newOffset = prompt("Введите новое значение отступа справа (в пикселях):");
+        var newOffset = prompt("Введите новое значение отступа (px не указывать):");
         if (newOffset !== null) {
             changeOffsetRight(parseInt(newOffset));
         }
