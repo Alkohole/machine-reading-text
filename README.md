@@ -13,8 +13,9 @@
 ## `Навигация`
 </summary>
 
-- [**Установка расширения**](#установка-расширения)
-- [**Обновление скрипта**](#обновление-скрипта)
+- [**Интерфейс и Управление**](#интерфейс-и-управление)
+- [**Установка и Обновление**](#установка-и-обновление)
+- [**Голоса и Эмоции**](#голоса-и-эмоции)
 - [**Окно объявлений**](#окно-объявлений)
 - [**Окно сообщений**](#окно-сообщений)
 
@@ -24,7 +25,7 @@
 
 https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb5a7c
 
-## Интерфейс <sup>_`(Apr 16, 2024)`_</sup>:
+## Интерфейс и Управление:
 | Интерфейс веба | Интерфейс плагина | Интерфейс плагина  (свернутый)  |
 |---|---|---|
 | ![](https://github.com/Alkohole/machine-reading-text/raw/main/examples/full.png) | ![](https://github.com/Alkohole/machine-reading-text/raw/main/examples/normal.png) | ![](https://github.com/Alkohole/machine-reading-text/raw/main/examples/small.png) |
@@ -46,13 +47,12 @@ https://github.com/Alkohole/machine-reading-text/blob/fe8f3278a5f6529f2cc64e8d6c
 ```var offsetRight =``` - число сдвига в пикселях _(пиксели не указываются)_ <br>
 ```var charPos =``` - сторона по умолчанию **left**/**right**
 
-## Установка расширения:
+## Установка и Обновление:
 
+### Установка скрипта
 1. Установите расширение **[Tampermonkey](https://www.tampermonkey.net/)** (Альтернатива для Safari: **[UserScripts](https://apps.apple.com/app/userscripts/id1463298887 )**).
 2. **[Установите Скрипт](https://github.com/Alkohole/machine-reading-text/raw/main/mrt.user.js)**.
 
-
-## Обновление скрипта:
 ### Ручное обновление (Рекомендуется):
 
 1. **[Перейдите по ссылке](https://github.com/Alkohole/machine-reading-text/raw/main/mrt.user.js)**.
@@ -64,59 +64,37 @@ https://github.com/Alkohole/machine-reading-text/blob/fe8f3278a5f6529f2cc64e8d6c
 2. Войдите в раздел **Утилиты**.
 3. Нажмите на кнопку **Проверить обновления скриптов**.
 
-### Голоса:
+## Голоса и Эмоции:
 
 _В качестве примера для голоса служит глава 3 стихотворения Томаса Стернза Элиота "Полые люди"_
 
-| TTS Name | Model | Examples |
-|----|----|----|
-| **Alice** (♀) _(дефолтный)_| `tatyana_shitova.gpu` |[Tatyana_Shitova.ogg](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Tatyana_Shitova.ogg)|
-| **Oksana** (♀) | `oksana.gpu` |[Oksana.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Oksana.wav)|
-| **Jane** (♀) | `jane.gpu` |[Jane.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Jane.wav)|
-| **Omazh** (♀) | `omazh.gpu` |[Omazh.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Omazh.wav)|
-| **Nastya** (♀) | `nastya.gpu` |[Nastya.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Nastya.wav)|
-| **Sasha** (♀) | `sasha.gpu` |[Sasha.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Sasha.wav)|
-| **Tatyana Abramova** (♀) | `tatyana_abramova.gpu` |[Tatyana_Abramova.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Tatyana_Abramova.wav)|
-| **Ermil** (♂) | `ermil.gpu` |[Ermil.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Ermil.wav)|
-| **Zahar** (♂) | `zahar.gpu` |[Zahar.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Zahar.wav)|
-| **Kolya** (♂) | `kolya.gpu` |[Kolya.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Kolya.wav)|
-| **Kostya** (♂) | `kostya.gpu` |[Kostya.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Kostya.wav)|
-| **Anton Samokhvalov** (♂) | `anton_samokhvalov.gpu` |[Anton_Samokhvalov.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Anton_Samokhvalov.wav)|
-| **Oksana** <sup>`Uk`</sup> (♀) | `oksana` | [Oksana_nogpu_ua.ogg](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Oksana_nogpu_ua.ogg) |
-| **Selay** <sup>`Tr`</sup> (♀) | `selay.gpu` | [Selay.ogg](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Selay.ogg) |
-| **Erkanyavas** <sup>`En`</sup> (♂) | `erkanyavas` | [Erkanyavas.ogg](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Erkanyavas.ogg) |
-
-
-
-
-### Эмоции:
-|  | 😈 | 😐 | ☺️ | 🥳 |
-|--- | :---: | :---: | :---: | :---: |
-| **Alice** (♀) |❌|✅|❌|✅|
-| **Oksana** (♀) |*✅***|✅|*✅***|❌|
-| **Jane** (♀) |*✅***|✅|*✅***|❌|
-| **Omazh** (♀) |*✅***|✅|❌|❌|
-| **Nastya** (♀) |✅|*✅***|❌|❌|
-| **Sasha** (♀) |*✅***|*✅***|✅|❌|
-| **Tatyana Abramova** (♀) |❌|❌|✅|❌|
-| **Ermil** (♂) |*✅***|✅|*✅***|❌|
-| **Zahar** (♂) |*✅***|✅|*✅***|❌|
-| **Kolya** (♂) |*✅***|✅|*✅***|❌|
-| **Kostya** (♂) |*✅***|✅|*✅***|❌|
-| **Anton Samokhvalov** (♂) |❌|✅|❌|❌|
-| **Levitan** (♂) |❌|*✅***|*✅***|❌|
-| **Nick** (♂) |*✅***|*✅***|*✅***|❌|
-| **Zhenya** (♂) |*✅***|*✅***|*✅***|❌|
-| **Selay** <sup>`Tr`</sup> (♀) |❌|✅|❌|❌|
-| **Silaerkan** <sup>`En`</sup> (♀) |❌|*✅***|❌|❌|
-| **Erkanyavas** <sup>`En`</sup> (♂) |*✅***|*✅***|*✅***|❌|
+| TTS Name | 😈 | 😐 | ☺️ | 🥳 | Model | Examples |
+|--- | :---: | :---: | :---: | :---: | :--- | :--- |
+| **Alice** (♀)<sup>`дефолтный`</sup> |❌|✅|❌|✅| `tatyana_shitova.gpu` |[Tatyana.ogg](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Tatyana_Shitova.ogg)|
+| **Oksana** (♀) |*✅***|✅|*✅***|❌| `oksana.gpu` |[`RU`](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Oksana.wav) / [`UA`](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Oksana_nogpu_ua.ogg)|
+| **Jane** (♀) |*✅***|✅|*✅***|❌| `jane.gpu` |[Jane.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Jane.wav)|
+| **Omazh** (♀) |*✅***|✅|❌|❌| `omazh.gpu` |[Omazh.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Omazh.wav)|
+| **Nastya** (♀) |✅|*✅***|❌|❌| `nastya.gpu` |[Nastya.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Nastya.wav)|
+| **Sasha** (♀) |*✅***|*✅***|✅|❌| `sasha.gpu` |[Sasha.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Sasha.wav)|
+| **Tatyana** (♀) |❌|❌|✅|❌| `tatyana_abramova.gpu` |[Tatyana.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Tatyana_Abramova.wav)|
+| **Ermil** (♂) |*✅***|✅|*✅***|❌| `ermil.gpu` |[Ermil.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Ermil.wav)|
+| **Zahar** (♂) |*✅***|✅|*✅***|❌| `zahar.gpu` |[Zahar.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Zahar.wav)|
+| **Kolya** (♂) |*✅***|✅|*✅***|❌| `kolya.gpu` |[Kolya.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Kolya.wav)|
+| **Kostya** (♂) |*✅***|✅|*✅***|❌| `kostya.gpu` |[Kostya.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Kostya.wav)|
+| **Anton** (♂) |❌|✅|❌|❌| `anton_samokhvalov.gpu` |[Anton.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Anton_Samokhvalov.wav)|
+| **Levitan** (♂) |❌|*✅***|*✅***|❌| `levitan` ||
+| **Nick** (♂) |*✅***|*✅***|*✅***|❌| `nick` ||
+| **Zhenya** (♂) |*✅***|*✅***|*✅***|❌| `zhenya` ||
+| **Selay** <sup>`Tr`</sup> (♀) |❌|✅|❌|❌| `selay.gpu` | [Selay.ogg](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Selay.ogg) |
+| **Silaerkan** <sup>`En`</sup> (♀) |❌|*✅***|❌|❌| `silaerkan` ||
+| **Erkanyavas** <sup>`En`</sup> (♂) |*✅***|*✅***|*✅***|❌| `erkanyavas` | [Erkanyavas.ogg](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Erkanyavas.ogg) |
 
 
 **✅** - Поддерживается.<br>
 *✅*** - Доступно только в **`CPU`** версии модели. _**На данный момент доступна для языков отличных от Русского**_ <br>
 **❌** - Нет поддержки.
 
-### ⚠️ Возможные планы:
+## ⚠️ Возможные планы:
 - [ ] Поблочная озвучка и визуализация блоков.
 - [ ] Кэштрование параметров селектора. _(память)_
 - [ ] Плавающее окно.
