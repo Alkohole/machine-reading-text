@@ -17,7 +17,6 @@
 - [**Установка и Обновление**](#установка-и-обновление)
 - [**Голоса и Эмоции**](#голоса-и-эмоции)
 - [**Окно обновлений**](#окно-обновлений)
-- [**Окно сообщений**](#окно-сообщений)
 
 </details>
 
@@ -30,9 +29,6 @@ https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb
     <source src="https://github-production-user-asset-6210df.s3.amazonaws.com/59339504/289288865-99fdac2b-0f26-42e5-94eb-2a550acb5a7c.mp4" size="720">
     Your browser does not support the video tag.
   </video>
-  <script>
-    const players = Plyr.setup('#player');
-  </script>
 </div>
 
 ## Интерфейс и Управление:
@@ -80,24 +76,24 @@ _В качестве примера для голоса служит глава 
 
 | TTS Name | 😈 | 😐 | ☺️ | 🥳 | Model | Examples |
 |--- | :---: | :---: | :---: | :---: | :--- | :--- |
-| **Alice** (♀)<sup>`дефолтный`</sup> |❌|✅|❌|✅| `tatyana_shitova.gpu` |[Tatyana.ogg](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Tatyana_Shitova.ogg) <audio id="player" controls><source src="https://github.com/Alkohole/machine-reading-text/raw/main/examples/Tatyana_Shitova.ogg" type="audio/ogg" /></audio>|
-| **Oksana** (♀) |*✅***|✅|*✅***|❌| `oksana.gpu` |[`RU`](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Oksana.wav) / [`UA`](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Oksana_nogpu_ua.ogg) <audio id="player" controls><source src="https://github.com/Alkohole/machine-reading-text/raw/main/examples/Oksana.wav" type="audio/mp3" /></audio>|
-| **Jane** (♀) |*✅***|✅|*✅***|❌| `jane.gpu` |[Jane.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Jane.wav) <audio id="player" controls><source src="https://github.com/Alkohole/machine-reading-text/raw/main/examples/Jane.wav" type="audio/mp3" /></audio>|
-| **Omazh** (♀) |*✅***|✅|❌|❌| `omazh.gpu` |[Omazh.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Omazh.wav) <audio id="player" controls><source src="https://github.com/Alkohole/machine-reading-text/raw/main/examples/Omazh.wav" type="audio/mp3" /></audio>|
-| **Nastya** (♀) |✅|*✅***|❌|❌| `nastya.gpu` |[Nastya.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Nastya.wav) <audio id="player" controls><source src="https://github.com/Alkohole/machine-reading-text/raw/main/examples/Nastya.wav" type="audio/mp3" /></audio>|
-| **Sasha** (♀) |*✅***|*✅***|✅|❌| `sasha.gpu` |[Sasha.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Sasha.wav) <audio id="player" controls><source src="https://github.com/Alkohole/machine-reading-text/raw/main/examples/Sasha.wav" type="audio/mp3" /></audio>|
-| **Tatyana** (♀) |❌|❌|✅|❌| `tatyana_abramova.gpu` |[Tatyana.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Tatyana_Abramova.wav) <audio id="player" controls><source src="https://github.com/Alkohole/machine-reading-text/raw/main/examples/Tatyana_Abramova.wav" type="audio/mp3" /></audio>|
-| **Ermil** (♂) |*✅***|✅|*✅***|❌| `ermil.gpu` |[Ermil.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Ermil.wav) <audio id="player" controls><source src="https://github.com/Alkohole/machine-reading-text/raw/main/examples/Ermil.wav" type="audio/mp3" /></audio>|
-| **Zahar** (♂) |*✅***|✅|*✅***|❌| `zahar.gpu` |[Zahar.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Zahar.wav) <audio id="player" controls><source src="https://github.com/Alkohole/machine-reading-text/raw/main/examples/Zahar.wav" type="audio/mp3" /></audio>|
-| **Kolya** (♂) |*✅***|✅|*✅***|❌| `kolya.gpu` |[Kolya.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Kolya.wav) <audio id="player" controls><source src="https://github.com/Alkohole/machine-reading-text/raw/main/examples/Kolya.wav" type="audio/mp3" /></audio>|
-| **Kostya** (♂) |*✅***|✅|*✅***|❌| `kostya.gpu` |[Kostya.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Kostya.wav) <audio id="player" controls><source src="https://github.com/Alkohole/machine-reading-text/raw/main/examples/Kostya.wav" type="audio/mp3" /></audio>|
-| **Anton** (♂) |❌|✅|❌|❌| `anton_samokhvalov.gpu` |[Anton.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Anton_Samokhvalov.wav) <audio id="player" controls><source src="https://github.com/Alkohole/machine-reading-text/raw/main/examples/Anton_Samokhvalov.wav" type="audio/mp3" /></audio>|
+| **Alice** (♀)<sup>`дефолтный`</sup> |❌|✅|❌|✅| `tatyana_shitova.gpu` |[Tatyana.ogg](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Tatyana_Shitova.ogg) |
+| **Oksana** (♀) |*✅***|✅|*✅***|❌| `oksana.gpu` |[`RU`](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Oksana.wav) / [`UA`](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Oksana_nogpu_ua.ogg) |
+| **Jane** (♀) |*✅***|✅|*✅***|❌| `jane.gpu` |[Jane.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Jane.wav) |
+| **Omazh** (♀) |*✅***|✅|❌|❌| `omazh.gpu` |[Omazh.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Omazh.wav) |
+| **Nastya** (♀) |✅|*✅***|❌|❌| `nastya.gpu` |[Nastya.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Nastya.wav) |
+| **Sasha** (♀) |*✅***|*✅***|✅|❌| `sasha.gpu` |[Sasha.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Sasha.wav) |
+| **Tatyana** (♀) |❌|❌|✅|❌| `tatyana_abramova.gpu` |[Tatyana.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Tatyana_Abramova.wav) |
+| **Ermil** (♂) |*✅***|✅|*✅***|❌| `ermil.gpu` |[Ermil.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Ermil.wav) |
+| **Zahar** (♂) |*✅***|✅|*✅***|❌| `zahar.gpu` |[Zahar.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Zahar.wav) |
+| **Kolya** (♂) |*✅***|✅|*✅***|❌| `kolya.gpu` |[Kolya.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Kolya.wav) |
+| **Kostya** (♂) |*✅***|✅|*✅***|❌| `kostya.gpu` |[Kostya.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Kostya.wav) |
+| **Anton** (♂) |❌|✅|❌|❌| `anton_samokhvalov.gpu` |[Anton.wav](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Anton_Samokhvalov.wav) |
 | **Levitan** (♂) |❌|*✅***|*✅***|❌| `levitan` ||
 | **Nick** (♂) |*✅***|*✅***|*✅***|❌| `nick` ||
 | **Zhenya** (♂) |*✅***|*✅***|*✅***|❌| `zhenya` ||
-| **Selay** <sup>`Tr`</sup> (♀) |❌|✅|❌|❌| `selay.gpu` | [Selay.ogg](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Selay.ogg) <audio id="player" controls><source src="https://github.com/Alkohole/machine-reading-text/raw/main/examples/Selay.ogg" type="audio/ogg" /></audio>|
+| **Selay** <sup>`Tr`</sup> (♀) |❌|✅|❌|❌| `selay.gpu` | [Selay.ogg](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Selay.ogg) |
 | **Silaerkan** <sup>`En`</sup> (♀) |❌|*✅***|❌|❌| `silaerkan` ||
-| **Erkanyavas** <sup>`En`</sup> (♂) |*✅***|*✅***|*✅***|❌| `erkanyavas` | [Erkanyavas.ogg](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Erkanyavas.ogg) <audio id="player" controls><source src="https://github.com/Alkohole/machine-reading-text/raw/main/examples/Erkanyavas.ogg" type="audio/ogg" /></audio>|
+| **Erkanyavas** <sup>`En`</sup> (♂) |*✅***|*✅***|*✅***|❌| `erkanyavas` | [Erkanyavas.ogg](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Erkanyavas.ogg) |
 
 
 **✅** - Поддерживается.<br>
@@ -118,9 +114,10 @@ _В качестве примера для голоса служит глава 
 - [x] **Исправить ошибки в `README.md`**...
 
 <br><br>
-
   
 # Окно обновлений
+
+<br>
 
 ## Update in v0.5.4(js)
 - Добавлена капсуляция `Shadow DOM` - теперь css/js сайтов не будет влиять на интерфейс плагина.
@@ -142,70 +139,7 @@ _Предыдущее обновление:_
 - Удалены голоса **Erkanyavas** и **Silaerkan** из Турецкого языка.
 - Добавлены 3 голоса: **Levitan**, **Nick** и **Zhenya**.
 
-
-
-
-<details>
-<summary>
-
-## `Окно сообщений`
-</summary>
-<hr>
-
-> <sup>_Add 26.05.24_</sup> <br>
-> Интересный баг получился: при вызове `prompt()`(настройки) в момент озвучки текста - озвучка ставится на паузу... <br>
-> Баг этот интересен потому, что функции паузы нету и я до сех пор не могу разобрать большую часть скрипта tts... <br>
-> PS: Один баг<sup>_(не этот)_</sup>, признаюсь, я заныкал под ковер) <br>
-> ![](https://user-images.githubusercontent.com/4020842/71448591-fb950080-274e-11ea-92ed-9489ec959d85.png)
-
 <br>
-
-> <sup>_Add 18.04.24_</sup> <br>
-> Когда на утро фикс превращается в крысу: <br>
-> ![](https://desu.shikimori.one/system/user_images/original/785574/1892228.jpg)
-
-<br>
-
-> <sup>_Add 09.04.24_</sup> <br>
-> Переработан интерфейс, и удалена страница **Скачать**. <br>
-> Я заметил, что украинский язык можно давать обычным моделям для русского языка, с минимальными погрешностями в произношении. <br>
-> Добавлена возможность вручную выставлять ударения используя `+` перед ударной буквой. Пример: `З+амок, зам+ок` <br>
-> В этой системе так же есть `-` который добавляет пайзу.
-
-<br>
-
-> <sup>_Add 24.03.24_</sup> <br>
-> Что происходит с **GitHub?!** Это просто _**пиз__Ц**_... Постоянно мой `README.md` саморедактируется и откатывается, чо это за _**на__Й**_**?!**
-
-<br>
-
-> <sup>_Add 23.03.24_</sup> <br>
-> В скором времени буду работать над функцией скачивания.
-
-<br>
-
-> <sup>_Add 10.03.24_</sup> <br>
-> Не представлюя как я умудрился пропустить еще 6 моделей TTS... Вроде бы они не работали раньше...<br>
-> В дополнение, я чуть почистил скрипт TTS... Надо бы еще чуток почитить...<br>
-> Фикс поля ввода для браузеров построенных на **Chromium**.
-
-<br>
-
-> <sup>_Add 24.02.24_</sup> <br>
-> Оригинальный скрипт **TTS** полный ад, переменные и константы просто однобуквенные приколы (пример: `a`, `e`, `t`, `g`, ...) и ищи-свищи кто есть что.
-
-<br>
-
-> <sup>_Add 23.02.24_</sup> <br>
-> Искал громкость, но случайно наткнулся на смену TTS модели.
-
-<br>
-
-> <sup>_Add 22.02.24_</sup> <br>
-> Забавно, но это расширение работает на телефоне Android.
-
-</details>
-<hr><br>
 
 > [!IMPORTANT]
 > Этот проект - мой личный каприз, и он не рассчитан на что-то серьезное. <br>
