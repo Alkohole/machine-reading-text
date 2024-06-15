@@ -30,6 +30,9 @@ https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb
     <source src="https://github-production-user-asset-6210df.s3.amazonaws.com/59339504/289288865-99fdac2b-0f26-42e5-94eb-2a550acb5a7c.mp4" size="720">
     Your browser does not support the video tag.
   </video>
+  <script>
+    const players = Plyr.setup('#player');
+  </script>
 </div>
 
 ## Интерфейс и Управление:
