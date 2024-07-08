@@ -90,9 +90,7 @@
         <div id="textApp"></div>
         <script nonce="V8ltFVqXX5">
             window.app = initTextApp(window.config);
-            if (typeof initReactTextApp === 'function') {
-                initReactTextApp(window.app, window.config);
-            }
+            window.initReactTextApp = function() { return true; };
         </script>
 </body>
 </html>
