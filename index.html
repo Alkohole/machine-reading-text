@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru" id="app" class="app application state-unresolved state-db_inactive  state-translatorExpanded  ">
 <head>
-    <link rel="shortcut icon" href="favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="css/style.css">
@@ -16,6 +15,7 @@
                 <div class="box-panel box-panel_bottom" data-box-panel="">
                     <div class="warning"></div>
                     <button id="textSpeaker" class="boxButton boxButton_tts button button_view_clear button_size_l button_icn button_round state-disabled"></button>
+                    <button id="speakerPause" class=""></button>
 
                     <div class="back"></div>
                     <select title="Speed" class="selector-speed" id="ttsSpeed">
@@ -85,13 +85,11 @@
             <script src="js/drop.js"></script>
         </main>
         <script nonce="V8ltFVqXX5" src="js/ttsset.js"></script>
-        <script src="https://bitbucket.org/qweweio/zeroone/raw/84537ec26360145b68c8d023c0e168ecef2cee37/text.modern.min.js" crossorigin="anonymous"></script>
+        <script src="js/text.modern.min.js" crossorigin="anonymous"></script>
         <script src="https://yastatic.net/s3/translate/v77.2/dist/scripts/bundles/webspeechkit.js" crossorigin="anonymous"></script>
         <div id="textApp"></div>
         <script nonce="V8ltFVqXX5">
             window.app = initTextApp(window.config);
-            window.initReactTextApp = function() { return true; };
-            initReactTextApp(window.app, window.config);
         </script>
 </body>
 </html>
