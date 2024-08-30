@@ -2,7 +2,7 @@
 // @name         [MRT] - Machine reading text
 // @name:ru      [MRT] - Машинное чтение текста
 // @namespace    http://tampermonkey.net/
-// @version      0.5.4
+// @version      0.5.5
 // @description  Display custom HTML page from URL on button click with settings panel
 // @author       Alkohole
 // @match        *://*/*
@@ -59,24 +59,18 @@
 
     var button = document.createElement("button");
     button.id = 'customButton';
-    button.style.backgroundImage = 'url("https://storage.yandexcloud.net/cloud-www-assets/region-assets/ru/favicon/favicon.ico")';
-    button.style.backgroundSize = 'cover';
-    button.style.backgroundColor = "rgb(248, 233, 214)";
-    button.style.fontSize = "20px";
     button.style.position = "fixed";
-    button.style.bottom = "10px";
+    button.style.bottom = "5px";
     button.style[charPos] = `calc(10px + ${offset}px)`;
     button.style.width = "30px";
-    button.style.height = "30px";
-    button.style.borderRadius = "50%";
+    button.style.height = "4px";
+    button.style.borderRadius = "15px";
     button.style.zIndex = 9999;
     button.style.opacity = 0.1;
     button.style.border = "none";
     button.style.boxSizing = "border-box";
-    button.style.padding = "0";
-    button.style.transition = "opacity 0.5s ease";
-    button.onmouseover = function() { this.style.opacity = 0.8; }
-    button.onmouseout = function() { this.style.opacity = 0.1; }
+    button.style.padding = "5px 10px";
+    button.style.cursor = "pointer";
 
     var toggleButton = document.createElement("button");
     toggleButton.id = 'toggleButton';
@@ -86,32 +80,25 @@
     toggleButton.style.border = "none";
     toggleButton.style.position = "fixed";
     toggleButton.style[charPos] = `calc(130px + ${offset}px)`;
-    toggleButton.style.zIndex = 9998;
+    toggleButton.style.zIndex = 9999;
     toggleButton.style.backgroundColor = "rgb(78, 78, 78)";
     toggleButton.style.padding = "5px 10px";
     toggleButton.style.cursor = "pointer";
-    toggleButton.style.transition = "bottom 0.5s ease";
 
     var settingsButton = document.createElement("button");
     settingsButton.id = 'customSet';
-    settingsButton.style.backgroundImage = 'url("https://cdn-icons-png.flaticon.com/256/2040/2040504.png")';
-    settingsButton.style.backgroundSize = 'cover';
-    settingsButton.style.backgroundColor = "rgb(248, 233, 214)";
+    settingsButton.style.backgroundColor = "rgb(255, 207, 94)";
     settingsButton.style.position = "fixed";
     settingsButton.style.display = "none";
-    settingsButton.style.opacity = 0.1;
     settingsButton.style.bottom = "10px";
     settingsButton.style.width = "30px";
-    settingsButton.style.height = "30px";
-    settingsButton.style.borderRadius = "50%";
+    settingsButton.style.height = "4px";
+    settingsButton.style.borderRadius = "15px";
     settingsButton.style.border = "none";
     settingsButton.style[charPos] = `calc(50px + ${offset}px)`;
     settingsButton.style.zIndex = 9999;
-    settingsButton.style.padding = "0";
+    settingsButton.style.padding = "5px 10px";
     settingsButton.style.cursor = "pointer";
-    settingsButton.style.transition = "opacity 0.5s ease";
-    settingsButton.onmouseover = function() { this.style.opacity = 0.8; }
-    settingsButton.onmouseout = function() { this.style.opacity = 0.1; }
     settingsButton.addEventListener("click", function() {
         var newOffset = prompt("Введите новое значение отступа в px(без указания px):");
         if (newOffset !== null) {
@@ -127,7 +114,7 @@
     iframe.style.position = "fixed";
     iframe.style.bottom = "0px";
     iframe.style[charPos] = `calc(5px + ${offset}px)`;
-    iframe.style.zIndex = 9997;
+    iframe.style.zIndex = 9998;
     iframe.style.display = "none";
     iframe.style.border = "none";
     iframe.style.opacity = 0;
@@ -140,7 +127,6 @@
             settingsButton.style.display = "block";
             setTimeout(function() {
                 iframe.style.opacity = 1;
-                settingsButton.style.opacity = 0.1;
             }, 0);
         } else {
             iframe.style.opacity = 0;
@@ -156,18 +142,41 @@
     function adjustToggleButtonPosition() {
         if (iframe.style.height === "460px") {
             toggleButton.style.display = "block";
-            toggleButton.style.bottom = "453px";
-            button.style.bottom = "445px";
+            toggleButton.style.bottom = "454px";
+            button.style.bottom = "454px";
             button.style[charPos] = `calc(10px + ${offset}px)`;
-            settingsButton.style.bottom = "445px";
+            settingsButton.style.bottom = "454px";
             settingsButton.style[charPos] = `calc(50px + ${offset}px)`;
+            button.style.backgroundColor = "rgb(255, 94, 94)";
+            button.style.opacity = 0.8;
+            settingsButton.style.opacity = 0.8;
+            toggleButton.style.opacity = 0.8;
+            button.onmouseover = function() { this.style.opacity = 0.8; }
+            button.onmouseout = function() { this.style.opacity = 0.8; }
+            settingsButton.onmouseover = function() { this.style.opacity = 0.8; }
+            settingsButton.onmouseout = function() { this.style.opacity = 0.8; }
+            toggleButton.onmouseover = function() { this.style.opacity = 0.8; }
+            toggleButton.onmouseout = function() { this.style.opacity = 0.8; }
         } else {
             toggleButton.style.display = "block";
             toggleButton.style.bottom = "110px";
-            button.style.bottom = "100px";
+            button.style.bottom = "110px";
             button.style[charPos] = `calc(10px + ${offset}px)`;
-            settingsButton.style.bottom = "100px";
+            settingsButton.style.bottom = "110px";
             settingsButton.style[charPos] = `calc(50px + ${offset}px)`;
+            button.style.backgroundColor = "rgb(255, 94, 94)";
+            button.style.transition = "opacity 0.5s ease";
+            button.style.opacity = 0.2;
+            settingsButton.style.opacity = 0.2;
+            toggleButton.style.opacity = 0.2;
+            settingsButton.style.transition = "opacity 0.5s ease";
+            toggleButton.style.transition = "opacity 0.5s ease";
+            button.onmouseover = function() { this.style.opacity = 0.8; }
+            button.onmouseout = function() { this.style.opacity = 0.2; }
+            settingsButton.onmouseover = function() { this.style.opacity = 0.8; }
+            settingsButton.onmouseout = function() { this.style.opacity = 0.2; }
+            toggleButton.onmouseover = function() { this.style.opacity = 0.8; }
+            toggleButton.onmouseout = function() { this.style.opacity = 0.2; }
         }
     }
 
@@ -186,6 +195,11 @@
             button.style[charPos] = `calc(10px + ${offset}px)`;
             settingsButton.style.bottom = "10px";
             settingsButton.style[charPos] = `calc(50px + ${offset}px)`;
+            button.style.backgroundColor = "rgb(94, 197, 255)";
+            button.style.opacity = 0.1;
+            button.onmouseover = function() { this.style.opacity = 0.8; }
+            button.onmouseout = function() { this.style.opacity = 0.1; }
+            button.style.transition = "opacity 0.5s ease";
         } else {
             adjustToggleButtonPosition();
         }
