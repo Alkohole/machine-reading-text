@@ -37,12 +37,15 @@ https://github.com/Alkohole/udr/assets/59339504/99fdac2b-0f26-42e5-94eb-2a550acb
 | ![](https://github.com/Alkohole/machine-reading-text/raw/main/examples/full.png) | ![](https://github.com/Alkohole/machine-reading-text/raw/main/examples/normal.png) | ![](https://github.com/Alkohole/machine-reading-text/raw/main/examples/small.png) |
 
 | Кнопка | Действие |
-|----|---------|
+|:---:|---------|
 | **▶** | Воспроизводит озвучивание текста. |
 | **■** | Завершает озвучивание текста. |
 | **▶II** | Останавлевает/Воспроизводит озвучивание текста. |
 | **✖▶** | Невозможность прочитать текст, превышение лимита. |
-| **⚙** | Настройки |
+| ![#5EC5FF](https://place-hold.it/15/5EC5FF/000000?text=+) | Открыть окно |
+| ![#FF5E5E](https://place-hold.it/15/FF5E5E/000000?text=+) | Закрыть окно |
+| ![#FFCF5E](https://place-hold.it/15/FFCF5E/000000?text=+) | Открыть настройки |
+| ![#4E4E4E](https://place-hold.it/15/4E4E4E/000000?text=+) | Уменьшить/увеличить окно |
 
 - Имеется обработчик дропа в окно ввода (Выделите текст и перетащите его в окно ввода, ранее находящийся в окне текст автоматически стирается).
 - Имеется счетчик количества символов в окне (Если превышение лимита - вы увидите сообщение).
