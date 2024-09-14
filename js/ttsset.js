@@ -191,9 +191,7 @@ locales.themeLabels = 0;
 locales.settingOptions = 0;
 locales.settingOptionDescritions = 0;
 desktopLocales.hotKeys = 0;
-// Object.assign(window.config || {}, {});
 window.locales.cardsCarousel = {};
-// Object.assign(window.config || {}, {});
 locales.speller = {
     spellerPopupTitle: 0,
     spellerPopupClose: 0,
