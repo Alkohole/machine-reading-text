@@ -7,7 +7,8 @@
 // @author       Alkohole
 // @match        *://*/*
 // @exclude      https://alkohole.github.io/machine-reading-text/*
-// @grant        none
+// @grant        GM.setValue
+// @grant        GM.getValue
 // @icon         https://storage.yandexcloud.net/cloud-www-assets/region-assets/ru/favicon/favicon.ico
 // @connect api.browser.yandex.ru
 // @downloadURL https://github.com/Alkohole/udr/raw/main/mrt.user.js
