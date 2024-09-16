@@ -1,4 +1,4 @@
-# [MRT] - Machine Reading Text ([RU](README.md)/[EN](README-en.md))
+# [MRT] - Machine Reading Text ([RU](README.md)/[EN](README-en.md)/[TR](README-tr.md))
 The extension allows you to reproduce written text with a synthesized voice, now available not only in Yandex Browser for Windows. Grateful to **[Yandex.Translate](https://translate.yandex.ru/)** for this opportunity.
 - The **[Listen](https://alkohole.github.io/machine-reading-text/)** function has a limit of 20k characters *(≈3000 words* **/** *≈11 minutes)* per request. **(✅ Stable)**
 
