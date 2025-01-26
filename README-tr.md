@@ -5,7 +5,7 @@ Bu uzantı, yazılı metni sentetik bir sesle yeniden üretmenize olanak tanır 
 |  | Önceki | Sonraki | Tarih |
 |---|---|---|---|
 | Uzantı | ~~v0.5.5~~ | [**v0.5.6**_(js)_](#v056jsde-güncelleme) | 14.09.24 |
-| Pencere Sayfası | ~~v0.4.1~~ | [**v0.4.2**_(web)_](#v042webde-güncelleme) | 14.09.24 |
+| Pencere Sayfası | ~~v0.4.2~~ | [**v0.4.3**_(web)_](#v043webde-güncelleme) | 26.01.25 |
 
 <details>
 <summary>
@@ -99,6 +99,7 @@ _Ses örneği olarak Thomas Stearns Eliot'ın "The Hollow Men" şiirinin 3. böl
 | **Zhenya** (♂) |*✅***|*✅***|*✅***|❌| `zhenya` ||
 | **Rezeda** <sup>`Tt`</sup> (♀) |❌|✅|❌|❌| `rezeda.gpu` ||
 | **Selay** <sup>`Tr`</sup> (♀) |❌|✅|❌|❌| `selay.gpu` | [Selay.ogg](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Selay.ogg) |
+| **Chuvash** <sup>`Cv`</sup> (♀) |❌|✅|❌|❌| `chuvash.gpu` ||
 | **Silaerkan** <sup>`En`</sup> (♀) |❌|*✅***|❌|❌| `silaerkan` ||
 | **Erkanyavas** <sup>`En`</sup> (♂) |*✅***|*✅***|*✅***|❌| `erkanyavas` | [Erkanyavas.ogg](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Erkanyavas.ogg) |
 
@@ -117,7 +118,7 @@ _Ses örneği olarak Thomas Stearns Eliot'ın "The Hollow Men" şiirinin 3. böl
 - [x] Duraklatma.
 - [x] Ayarlar, uzantı penceresinin konumlandırılması.
 - [x] **`CPU`** ve **`GPU`** arasında geçiş yapabilme yeteneği. _(Şu an kısmen)_
-- [x] Dil değiştirme yeteneği. _(`Ru`, `Tr`, `Tt`, `Uk`, `En`)_
+- [x] Dil değiştirme yeteneği. _(`Ru`, `Tr`, `Cv`, `Tt`, `Uk`, `En`)_
 - [x] **`WAV`** formatından **`WEBM`**/**`OGG`** formatlarına geçiş.
 - [x] Hız değiştirme yeteneği.
 - [x] Duyguları değiştirme yeteneği.
@@ -158,11 +159,15 @@ _Önceki güncelleme:_
 > - Pencere konumlandırmasını değiştirme imkanı eklendi.
 > - Ayarlar düğmesi eklendi.
 
-## v0.4.2(web) Güncellemesi
-- Yenilikler:
-  - Seçicilerin önbelleğe alınması.
+## v0.4.3(web) Güncellemesi
+- Diller eklendi:
+  - Çuvaş dili - `Cv`.
 
 _Önceki güncelleme:_
+> ## v0.4.2(web) Güncellemesi
+> - Yenilikler:
+>   - Seçicilerin önbelleğe alınması.
+
 > ## v0.4.1(web) Güncellemesi
 > - Betik sunucusu değiştirildi - metin seslendirme reddedilme sorunu çözüldü.
 > - `webspeech` sürümü v160.1'e güncellendi.
