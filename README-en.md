@@ -5,7 +5,7 @@ The extension allows you to reproduce written text with a synthesized voice, now
 |  | From | To | Date |
 |---|---|---|---|
 | Extension | ~~v0.5.5~~ | [**v0.5.6**_(js)_](#update-in-v056js) | 14.09.24 |
-| Window Page | ~~v0.4.1~~ | [**v0.4.2**_(web)_](#update-in-v042web) | 14.09.24 |
+| Window Page | ~~v0.4.2~~ | [**v0.4.3**_(web)_](#update-in-v043web) | 26.01.25 |
 
 <details>
 <summary>
@@ -99,6 +99,7 @@ _As an example for the voice, chapter 3 of Thomas Stearns Eliot's poem "The Holl
 | **Zhenya** (♂) |*✅***|*✅***|*✅***|❌| `zhenya` ||
 | **Rezeda** <sup>`Tt`</sup> (♀) |❌|✅|❌|❌| `rezeda.gpu` ||
 | **Selay** <sup>`Tr`</sup> (♀) |❌|✅|❌|❌| `selay.gpu` | [Selay.ogg](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Selay.ogg) |
+| **Chuvash** <sup>`Cv`</sup> (♀) |❌|✅|❌|❌| `chuvash.gpu` ||
 | **Silaerkan** <sup>`En`</sup> (♀) |❌|*✅***|❌|❌| `silaerkan` ||
 | **Erkanyavas** <sup>`En`</sup> (♂) |*✅***|*✅***|*✅***|❌| `erkanyavas` | [Erkanyavas.ogg](https://github.com/Alkohole/machine-reading-text/raw/main/examples/Erkanyavas.ogg) |
 
@@ -117,7 +118,7 @@ _As an example for the voice, chapter 3 of Thomas Stearns Eliot's poem "The Holl
 - [x] Pause.
 - [x] Settings, positioning of the extension window.
 - [x] Ability to switch between **`CPU`** and **`GPU`**. _(Partially at the moment)_
-- [x] Ability to change language. _(`Ru`, `Tr`, `Tt`, `Uk`, `En`)_
+- [x] Ability to change language. _(`Ru`, `Tr`, `Cv`, `Tt`, `Uk`, `En`)_
 - [x] Transition from **`WAV`** format to **`WEBM`**/**`OGG`** formats.
 - [x] Ability to change speed.
 - [x] Ability to change emotions.
@@ -158,11 +159,15 @@ _Previous update:_
 > - Added ability to change window positioning.
 > - Added settings button.
 
-## Update in v0.4.2(web)
-- New features:
-  - Selector caching.
+## Update in v0.4.3(web)
+- Languages added:
+  - Chuvash language - `Cv`.
 
 _Previous update:_
+> ## Update in v0.4.2(web)
+> - New features:
+>   - Selector caching.
+
 > ## Update in v0.4.1(web)
 > - Script server changed, - solving the problem with text-to-speech refusal.
 > - Updated `webspeech` version to v160.1.
